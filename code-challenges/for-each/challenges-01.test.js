@@ -32,6 +32,7 @@ Then, write a function named addNumbers that takes in four arguments:
 Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
 
 Return the modified array.
+(addNumbers(8, [], 5, addValues)
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
