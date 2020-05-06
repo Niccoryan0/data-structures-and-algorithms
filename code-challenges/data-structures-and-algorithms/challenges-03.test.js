@@ -96,18 +96,18 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-// const sortByPrice = (arr) => {
-//   arr.sort((left, right) => {
-//     if(left.price > right.price){
-//       return 1;
-//     } else if(left.price < right.price) {
-//       return -1;
-//     }else {
-//       return 0;
-//     }
-//   });
-//   return arr;
-// };
+const sortByPrice = (arr) => {
+  arr.sort((left, right) => {
+    if(left.price > right.price){
+      return 1;
+    } else if(left.price < right.price) {
+      return -1;
+    }else {
+      return 0;
+    }
+  });
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -178,11 +178,22 @@ const sortPeopleBetter = (arr) => {
     } else if(left.lastName < right.lastName) {
       return -1;
     }else {
-      return 0;
+      if(left.firstName > right.firstName){
+        return 1;
+      }else if(left.firstName < right.firstName){
+        return -1;
+      }else{
+        if(left.age > right.age){
+          return 1;
+        }else if(left.age < right.age){
+          return -1;
+        } else{
+          return 0;
+        }
+      }
     }
   });
   return arr;
-};
 };
 
 /* ------------------------------------------------------------------------------------------------
