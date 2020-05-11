@@ -38,17 +38,7 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   starWarsPeople.forEach((value) => {
-    const template = $('#template').clone();
-
-    template.attr('id', null);
-
-    template.find('h2').text(value.name);
-
-    template.find('h3').text(value.height);
-
-    template.find('p').text(value.eye_color);
-
-    $('main').append(template);
+    Handlebars.compile(Object.values())
   });
 };
 /* ------------------------------------------------------------------------------------------------

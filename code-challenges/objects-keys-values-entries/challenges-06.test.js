@@ -99,13 +99,12 @@ Write a function named getHouses that returns a new array containing the names o
 ------------------------------------------------------------------------------------------------ */
 
 const getHouses = (arr) => {
-  let houses = [];
-  arr.forEach((current) => {
-    houses.push(current.house);
-  });
+  const houses = [];
+
+  arr.forEach(current => houses.push(current.house));
+
   return houses;
 };
-
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -121,11 +120,12 @@ hasChildrenValues(characters, 'Sansa') will return false
 const hasChildrenValues = (arr, character) => {
   let result = false;
   const values = Object.values(arr);
-  values.forEach((current) => {
-    if (current.name === character && current.children) result = true;
+  values.forEach(current => {
+    if(current.name === character && current.children) result = true;
   });
   return result;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
