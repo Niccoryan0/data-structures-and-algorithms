@@ -1,5 +1,5 @@
 'use strict';
-
+/* global Handlebars */
 // to learn more about the cheerio library and what it is doing, look at their documentation: https://www.npmjs.com/package/cheerio
 const cheerio = require('cheerio');
 
@@ -37,10 +37,16 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templateWithJQuery = () => {
-  starWarsPeople.forEach((value) => {
-    Handlebars.compile(Object.values())
+  starWarsPeople.forEach((val) => {
+    let template = $('#template').clone();
+    template.attr('id', '');
+    template.find('h2').text(val.name);
+    template.find('h3').text(val.height);
+    template.find('p').text(val.eye_color);
+    $('main').append(template);
   });
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -141,7 +147,10 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  gruffaloCrumble.ingredients.forEach((currVal) => {
+    let total = currVal.split(' ');
+    result.push(total.slice(2).join(' '));
+  });
   return result;
 };
 
@@ -282,7 +291,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
