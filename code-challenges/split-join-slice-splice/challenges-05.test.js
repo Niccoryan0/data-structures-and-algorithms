@@ -212,7 +212,6 @@ const removeLastCharacters = (str, numberOfCharacters) => {
   return str.slice(0, str.length-numberOfCharacters);
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
 
