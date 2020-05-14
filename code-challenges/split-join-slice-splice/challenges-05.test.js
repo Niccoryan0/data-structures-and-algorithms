@@ -187,10 +187,9 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  const evensOut = arr.filter(x => {
-    return x % 2 === 0;
+  return arr.forEach((x, i) => {
+    if(x % 2 === 2) arr.splice(i,1);
   });
-  return evensOut;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -256,18 +255,13 @@ const extractVowels = (str) => {
   const noVowels = [];
   const allVowels = [];
   const sentence = str.split(' ');
-  console.log('sentence: ', sentence);
   sentence.forEach(current => {
     let filtered = current.split('').filter(x => !vowels.includes(x));
-    console.log('filter    ', filtered);
     let vowelStr = current.split('').filter(x => vowels.includes(x));
-    console.log('vowels    ', vowelStr);
-
-    console.log(filtered);
     noVowels.push(filtered.join(''));
-    allVowels.push(vowelStr.join(''));
+    allVowels.push(vowelStr.sort().join(''));
   });
-  return [noVowels.join(' '),allVowels.sort().join('')];
+  return [noVowels.join(' '),allVowels.join('').split('').sort().join('')];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -328,7 +322,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should remove the even numbers from the array', () => {
     let list = [1, 2, 3, 4, 5, 6];
     removeEvenValues(list);
@@ -373,7 +367,7 @@ describe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should return the string without vowels', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);

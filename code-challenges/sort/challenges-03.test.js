@@ -219,7 +219,15 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  return arr.sort((left, right) => {
+    if(left.lastName > right.lastName){
+      return 1;
+    } else if(left.lastName < right.lastName) {
+      return -1;
+    }else {
+      return 0;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
