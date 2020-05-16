@@ -1,4 +1,7 @@
 'use strict';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 
 // to learn more about the cheerio library and what it is doing, look at their documentation: https://www.npmjs.com/package/cheerio
 const cheerio = require('cheerio');
@@ -217,7 +220,7 @@ describe('Testing challenge 1', () => {
   test('It should add tea to the list', () => {
     addTea();
     expect($('li:nth-child(6)').text()).toStrictEqual('tea');
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
@@ -302,4 +305,4 @@ describe('Testing challenge 8', () => {
 
 function createSnippetWithJQuery(html){
   return cheerio.load(html);
-};
+}
