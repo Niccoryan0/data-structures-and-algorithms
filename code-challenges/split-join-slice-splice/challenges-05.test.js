@@ -1,5 +1,7 @@
 'use strict';
-/* global Handlebars */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 // to learn more about the cheerio library and what it is doing, look at their documentation: https://www.npmjs.com/package/cheerio
 const cheerio = require('cheerio');
 
@@ -10,19 +12,19 @@ Write a function named templateWithJQuery that uses jQuery to get the html templ
 ------------------------------------------------------------------------------------------------ */
 let starWarsPeople = [
   {
-    "name": "Luke Skywalker",
-    "height": "172",
-    "eye_color": "blue"
+    'name': 'Luke Skywalker',
+    'height': '172',
+    'eye_color': 'blue'
   },
   {
-    "name": "C-3PO",
-    "height": "167",
-    "eye_color": "yellow"
+    'name': 'C-3PO',
+    'height': '167',
+    'eye_color': 'yellow'
   },
   {
-    "name": "R2-D2",
-    "height": "96",
-    "eye_color": "red"
+    'name': 'R2-D2',
+    'height': '96',
+    'eye_color': 'red'
   }
 ];
 
@@ -187,9 +189,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  return arr.forEach((x, i) => {
-    if(x % 2 === 2) arr.splice(i,1);
-  });
+  for(let i = arr.length; i >= 0; i--)
+    if(arr[i] % 2 === 0){
+      arr.splice(i, 1);
+    }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -252,16 +256,14 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 
 const extractVowels = (str) => {
   const vowels  = ['a','e','i','o','u'];
-  const noVowels = [];
+  let noVowels = '';
   const allVowels = [];
-  const sentence = str.split(' ');
+  const sentence = str.split('');
   sentence.forEach(current => {
-    let filtered = current.split('').filter(x => !vowels.includes(x));
-    let vowelStr = current.split('').filter(x => vowels.includes(x));
-    noVowels.push(filtered.join(''));
-    allVowels.push(vowelStr.sort().join(''));
+    if (vowels.includes(current)) allVowels.push(current);
+    else noVowels += current;
   });
-  return [noVowels.join(' '),allVowels.join('').split('').sort().join('')];
+  return [noVowels,allVowels.sort().join('')];
 };
 
 /* ------------------------------------------------------------------------------------------------

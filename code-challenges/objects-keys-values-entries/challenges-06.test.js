@@ -1,4 +1,6 @@
 'use strict';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 
 // to learn more about the cheerio library and what it is doing, look at their documentation: https://www.npmjs.com/package/cheerio
 const cheerio = require('cheerio');
@@ -272,8 +274,8 @@ xdescribe('Testing challenge 1', () => {
     <h2> Jon S. </h2>
     <h3>  </h3>
     <p> Snow </p>
-  `])
-  })
+  `]);
+  });
 });
 
 describe('Testing challenge 2', () => {
