@@ -229,6 +229,7 @@ const week = {
 };
 
 const sortMeetingsByDay = (arr) => {
+
   arr.sort((left, right) => {
     if(week[left.dayOfWeek] > week[right.dayOfWeek]){
       return 1;
