@@ -16,6 +16,7 @@
     "handlebars": "^4.7.6",
     "jest": "^24.1.0",
     "mustache": "^4.0.1",
+    "node": "^14.2.0",
     "supertest": "^4.0.2"
   }
 }
