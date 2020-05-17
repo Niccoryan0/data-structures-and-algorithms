@@ -1,4 +1,6 @@
 'use strict';
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
