@@ -85,7 +85,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  return arr.reduce((acc, val) => val['store'] === 'Pet Store' ? acc = val.items.filter(x => x['name'] === 'Treats')[0].quantity : acc, 0);
+  return arr.reduce((acc, val) => val['store'] === 'Pet store' ? acc = val.items.filter(x => x['name'] === 'Treats')[0].quantity : acc, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
