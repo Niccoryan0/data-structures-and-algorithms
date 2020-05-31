@@ -102,6 +102,7 @@ const findAnything = (arr, target) => {
     if (val.includes(target)){
       acc.push(val);
     }
+    return acc;
   }, []);
 };
 
@@ -112,7 +113,11 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  let result = true;
+  arr.forEach(str => {
+    if (!str.includes(target)) result = false;
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +133,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(roster => roster.filter(name => (!name.includes('Brook'))));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,11 +156,35 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
   []
 ]
 ------------------------------------------------------------------------------------------------ */
+// test('It should sort events by the day on which they happen', () => {
+//   const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code', 'Saturday Night Fever'];
+//   const sortedEvents = sortByDay(events);
+//   expect(sortedEvents[0]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7']));
+//   expect(sortedEvents[1]).toEqual(expect.arrayContaining(['Dancing on Mondays and Tuesdays', 'in the club on a Tuesday']));
+//   expect(sortedEvents[2]).toStrictEqual([]);
+//   expect(sortedEvents[3]).toStrictEqual(['Thursday Night Code']);
+//   expect(sortedEvents[4]).toStrictEqual([]);
+//   expect(sortedEvents[5]).toStrictEqual(['Saturday Night Fever']);
+//   expect(sortedEvents[6]).toStrictEqual([]);
 
+//   const events2 = ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thursday'];
+//   const sortedEvents2 = sortByDay(events2);
+//   expect(sortedEvents2[0]).toStrictEqual(['Monday']);
+//   expect(sortedEvents2[1]).toEqual(expect.arrayContaining(['Tuesday', 'Tuesday 2']));
+//   expect(sortedEvents2[2]).toStrictEqual(['Wednesday and Thursday']);
+//   expect(sortedEvents2[3]).toEqual(expect.arrayContaining(['Wednesday and Thursday', 'Thursday']));
+//   expect(sortedEvents2[4]).toStrictEqual([]);
+//   expect(sortedEvents2[5]).toStrictEqual([]);
+//   expect(sortedEvents2[6]).toStrictEqual([]);
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
-  // Solution code here...
+  return daysOfWeek.reduce((acc, val) => {
+    const events = []
+    arr.forEach(string => {if (string.includes(val)) events.push(string);})
+    acc.push(events);
+    return acc;
+  }, [])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -167,7 +196,7 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 const characterByIndex = (arr) => {
-  // Solution code here...
+  return arr.map((val, i) => val[i])
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -237,7 +266,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should find all the strings that contain a given string', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
@@ -246,7 +275,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should determine whether all the strings contain a given string', () => {
     const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
 
@@ -256,7 +285,7 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should remove Brook from all courses', () => {
     const roster = [
       ['Michelle', 'Allie', 'Brook TESTING'],
@@ -274,7 +303,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should sort events by the day on which they happen', () => {
     const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code', 'Saturday Night Fever'];
     const sortedEvents = sortByDay(events);
@@ -298,7 +327,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should return the ith character of the ith string', () => {
     const words = ['apple', 'banana', 'cantaloupe'];
 

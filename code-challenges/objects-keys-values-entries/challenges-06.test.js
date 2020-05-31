@@ -72,8 +72,8 @@ let $ = createSnippetWithJQuery(`
 const templatingWithMustache = () => {
   const arr = [];
   characters.forEach(current => {
-    let output = Mustache.render($, Object.entries(current));
-    arr.push(output);
+    let output = Mustache.render($('body').html(), {name : current.name, spouse : current.spouse, children: current.children, house : current.house});
+    arr.push('\n' , output);
   });
   return arr;
 };

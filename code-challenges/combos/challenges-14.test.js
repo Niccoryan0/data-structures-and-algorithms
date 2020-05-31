@@ -157,7 +157,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  return url.includes('https://')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,7 +185,15 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let win = false;
+  const diags = [];
+  board.forEach((val, i) => {
+    if (val[0] !== '' && val[0] === val[1] && val[1] === val[2]) win = true;
+    if (board[0][i] !== '' && board[0][i] === board[1][i] && board[1][i] === board[2][i]) win = true;
+  })
+  if (board[0][0] !== '' && board[0][0] === board[1][1] && board[1][1] === board[2][2]) win = true;
+  if (board[0][2] !== '' && board[0][2] === board[1][1] && board[1][1] === board[2][0]) win = true;
+  return win;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -277,7 +285,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should check if url is https', () => {
 
     expect(isSecure('http://www.insecure.com')).toBe(false);
@@ -286,7 +294,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
