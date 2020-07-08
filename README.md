@@ -1,3 +1,4 @@
+
 # Code Fellows Code Challenges
 
 ## Table of Contents
@@ -21,7 +22,3 @@
 [Challenge: Split, join, slice, splice](code-challenges/split-join-slice-splice)
 [Challenge: Strings](code-challenges/strings)
 [Challenge: Values Vs. Reference](code-challenges/value-vs-reference)
-
-
-
-

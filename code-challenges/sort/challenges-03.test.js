@@ -32,18 +32,7 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  arr.sort((left, right) => {
-    if(left > right){
-      return 1;
-    } else if(left < right) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
-  return arr;
-};
+const alphabetize = (arr) => arr.sort();
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -52,15 +41,7 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  arr.sort((left, right) => {
-    if(left.length > right.length){
-      return 1;
-    } else if(left.length < right.length) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
+  arr.sort((left, right) => left.length > right.length ? 1:-1);
   return arr;
 };
 
@@ -72,18 +53,8 @@ Write a function named alphabetizeBetter that takes in an array of strings and r
 For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, and so is ['alphabet', 'Alphabet', 'carrot', 'Zebra'].
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetizeBetter = (arr) => {
-  arr.sort((left, right) => {
-    if(left.toLowerCase() > right.toLowerCase()){
-      return 1;
-    } else if(left.toLowerCase() < right.toLowerCase()) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
-  return arr;
-};
+const alphabetizeBetter = (arr) => arr.sort((left, right) => left.toLowerCase() > right.toLowerCase() ? 1:-1);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -98,18 +69,8 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const sortByPrice = (arr) => {
-  arr.sort((left, right) => {
-    if(left.price > right.price){
-      return 1;
-    } else if(left.price < right.price) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
-  return arr;
-};
+const sortByPrice = (arr) => arr.sort((left, right) => left.price > right.price ? 1:-1);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -119,18 +80,8 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
-const sortNumbersByLength = (arr) => {
-  arr.sort((left, right) => {
-    if(left.toString().length > right.toString().length){
-      return 1;
-    } else if(left.toString().length < right.toString().length) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
-  return arr;
-};
+const sortNumbersByLength = (arr) => arr.sort((left, right) => left.toString().length > right.toString().length ? 1:-1);
+
 
 /*-----------------------------------------------------------------------------------------------
 CHALLENGE 7
@@ -150,18 +101,8 @@ const people = [
   new Person('Stan', 'Seattle', 67),
 ];
 
-const sortPeople = (arr) => {
-  arr.sort((left, right) => {
-    if(left.lastName > right.lastName){
-      return 1;
-    } else if(left.lastName < right.lastName) {
-      return -1;
-    }else {
-      return 0;
-    }
-  });
-  return arr;
-};
+const sortPeople = (arr) => arr.sort((left, right) => left.lastName > right.lastName ? 1:-1);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8
