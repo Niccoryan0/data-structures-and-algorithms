@@ -32,8 +32,8 @@ Given an array and an integer, return an array with the integer placed at the ce
 
 
 ### Whiteboard Visual
-***[Your Whiteboard Image]***
 ![Array Shift Whiteboard](/ArrayShift.png)
+*Made w/ Paul Rest*
 
 
 ---
