@@ -21,11 +21,9 @@ namespace BinarySearch
         /// <returns>Index value for key if it's in the array, -1 if it isn't</returns>
         public static int BinarySearcher(int[] arr, int key)
         {
-            Array.Sort(arr);
             int start = 0;
             int max = arr.Length - 1;
-
-            while(start < max)
+            while(start <= max)
             {
                 int midpoint = (start + max) / 2;
                 if (key == arr[midpoint])

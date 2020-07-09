@@ -8,6 +8,8 @@ namespace BinarySearchTests
     {
         [Theory]
         [InlineData(new int[] { 4, 8, 15, 16, 23, 42 }, 15, 2)]
+        [InlineData(new int[] { 4, 8, 15, 16, 23, 42, 50, 70, 77, 81, 91, 99, 100, 101, 181, 190, 203, 543 }, 181, 14)]
+
 
         public void CanFindValue(int[] arr, int key, int expected)
         {
