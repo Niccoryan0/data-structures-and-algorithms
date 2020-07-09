@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArrayShift\ArrayShift.csproj" />
+    <ProjectReference Include="..\BinarySearch\BinarySearch.csproj" />
   </ItemGroup>
 
 </Project>
