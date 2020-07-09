@@ -32,7 +32,7 @@ Given an array and an integer, return an array with the integer placed at the ce
 
 
 ### Whiteboard Visual
-![Array Shift Whiteboard](/ArrayShift.png)
+![Array Shift Whiteboard](../../assets/ArrayShiftWB.png)
 *Made w/ Paul Rest*
 
 
