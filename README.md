@@ -6,7 +6,7 @@
 
 1. [Challenge: Insert and shift an array](code-challenges/ArrayShift)
 2. [Challenge: Binary Search](code-challenges/BinarySearch)
-3. [Challenge: Linked Lists](code-challenges/LinkedLists)
+3. [Challenge: Linked Lists](code-challenges/LinkedListLibrary)
 
 
 ### 301:
