@@ -1,4 +1,3 @@
-
 # Code Fellows Code Challenges
 
 ## Table of Contents
@@ -6,6 +5,8 @@
 ### 401:
 
 1. [Challenge: Insert and shift an array](code-challenges/ArrayShift)
+2. [Challenge: Binary Search](code-challenges/BinarySearch)
+
 
 ### 301:
 
