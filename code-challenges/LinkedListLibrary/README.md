@@ -21,6 +21,8 @@ Library for linked list methods and operations.
 
 
 ---
+### Whiteboard:
+![Whiteboard](assets/CodeChallenge06WB.png)
 
 ---
 
