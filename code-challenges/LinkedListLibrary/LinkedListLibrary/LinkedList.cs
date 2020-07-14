@@ -64,6 +64,10 @@ namespace LinkedListLibrary
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Append a node to the end of a singly linked list.
+        /// </summary>
+        /// <param name="val">Value to be appended.</param>
         public void Append(int val)
         {
             Current = Head;
@@ -79,9 +83,22 @@ namespace LinkedListLibrary
             
         }
 
+        /// <summary>
+        /// Insert item before a given value in the singly linked list
+        /// </summary>
+        /// <param name="val">Value in list</param>
+        /// <param name="newVal">New value to be added</param>
         public void InsertBefore(int val, int newVal)
         {
             Current = Head;
+            if (Current.Value == val)
+            {
+                Node temp = Current;
+                Current = new Node(newVal);
+                Current.Next = temp;
+                Head = Current;
+                return;
+            }
             while (Current.Next != null)
             {
                 if (Current.Next.Value == val)
@@ -96,7 +113,11 @@ namespace LinkedListLibrary
             }
         }
 
-
+        /// <summary>
+        /// Insert item before a given value in the singly linked list
+        /// </summary>
+        /// <param name="val">Value in list</param>
+        /// <param name="newVal">New value to be added</param>
         public void InsertAfter(int val, int newVal)
         {
             Current = Head;
