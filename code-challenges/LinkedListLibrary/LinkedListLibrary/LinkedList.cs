@@ -63,5 +63,52 @@ namespace LinkedListLibrary
             sb.Append("NULL");
             return sb.ToString();
         }
+
+        public void Append(int val)
+        {
+            Current = Head;
+            while (Current != null)
+            {
+                if (Current.Next == null)
+                {
+                    Current.Next = new Node(val);
+                    break;
+                }
+                Current = Current.Next;
+            }
+            
+        }
+
+        public void InsertBefore(int val, int newVal)
+        {
+            Current = Head;
+            while (Current != null)
+            {
+                if (Current.Next.Value == val)
+                {
+                    Node temp = Current;
+                    Current = new Node(newVal);
+                    Current.Next = temp;
+                    break;
+                }
+                Current = Current.Next;
+            }
+        }
+
+        public void InsertAfter(int val, int newVal)
+        {
+            Current = Head;
+            while (Current != null)
+            {
+                if (Current.Value == val)
+                {
+                    Node temp = Current.Next;
+                    Current.Next = new Node(newVal);
+                    Current.Next.Next = temp;
+                    break;
+                }
+                Current = Current.Next;
+            }
+        }
     }
 }
