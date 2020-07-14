@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using LinkedListLibrary;
+using System.Transactions;
 
 namespace LinkedListsTests
 {
@@ -80,6 +81,65 @@ namespace LinkedListsTests
 
             string expected = "15 -> 8 -> 4 -> NULL";
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void CanAppendNode()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Append(20);
+            while (list.Current.Next != null)
+            {
+                list.Current = list.Current.Next;
+            }
+            Assert.Equal(20, list.Current.Value);
+        }
+
+        [Fact]
+        public void CanAppendMultipleNodes()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Append(20);
+            list.Append(98);
+            list.Append(3);
+            string result = "16 -> 15 -> 8 -> 4 -> 20 -> 98 -> 3 -> NULL";
+            Assert.Equal(result, list.ToString());
+        }
+
+        [Fact]
+        public void CanInsertNodeBefore()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.InsertBefore(15, 30);
+
+            string result = "16 -> 30 -> 15 -> 8 -> 4 -> NULL";
+
+            Assert.Equal(result, list.ToString());
+        }
+        [Fact]
+        public void CanInsertNodeAfter()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.InsertAfter(15, 30);
+            string result = "16 -> 15 -> 30 -> 8 -> 4 -> NULL";
+
+            Assert.Equal(result, list.ToString());
         }
     }
 }
