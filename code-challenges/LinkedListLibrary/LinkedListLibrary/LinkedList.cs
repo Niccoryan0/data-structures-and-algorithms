@@ -82,18 +82,20 @@ namespace LinkedListLibrary
         public void InsertBefore(int val, int newVal)
         {
             Current = Head;
-            while (Current != null)
+            while (Current.Next != null)
             {
                 if (Current.Next.Value == val)
                 {
                     Node temp = Current;
                     Current = new Node(newVal);
-                    Current.Next = temp;
+                    Current.Next = temp.Next;
+                    temp.Next = Current;
                     break;
                 }
                 Current = Current.Next;
             }
         }
+
 
         public void InsertAfter(int val, int newVal)
         {

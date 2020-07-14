@@ -122,9 +122,9 @@ namespace LinkedListsTests
             list.Insert(8);
             list.Insert(15);
             list.Insert(16);
-            list.InsertBefore(15, 30);
+            list.InsertBefore(8, 30);
 
-            string result = "16 -> 30 -> 15 -> 8 -> 4 -> NULL";
+            string result = "16 -> 15 -> 30 -> 8 -> 4 -> NULL";
 
             Assert.Equal(result, list.ToString());
         }
