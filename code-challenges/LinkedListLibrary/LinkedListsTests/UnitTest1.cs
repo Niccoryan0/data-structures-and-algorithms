@@ -122,9 +122,9 @@ namespace LinkedListsTests
             list.Insert(8);
             list.Insert(15);
             list.Insert(16);
-            list.InsertBefore(15, 30);
+            list.InsertBefore(8, 30);
 
-            string result = "16 -> 30 -> 15 -> 8 -> 4 -> NULL";
+            string result = "16 -> 15 -> 30 -> 8 -> 4 -> NULL";
 
             Assert.Equal(result, list.ToString());
         }
@@ -140,6 +140,54 @@ namespace LinkedListsTests
             string result = "16 -> 15 -> 30 -> 8 -> 4 -> NULL";
 
             Assert.Equal(result, list.ToString());
+        }
+
+        [Fact]
+        public void CanSuccessfullyInsertANodeBeforeTheFirstNode()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            list.InsertBefore(42, 5);
+            string expected = "5 -> 42 -> 23 -> 16 -> 15 -> 8 -> 4 -> NULL";
+            Assert.Equal(expected, list.ToString());
+
+        }
+
+        [Fact]
+        public void CanSuccessfullyInsertAfterANodeInMiddle()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            list.InsertAfter(16, 5);
+            string expected = "42 -> 23 -> 16 -> 5 -> 15 -> 8 -> 4 -> NULL";
+            Assert.Equal(expected, list.ToString());
+
+        }
+
+        [Fact]
+        public void CanSuccessfullyInsertANodeAfterTheLast()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            list.InsertAfter(4, 5);
+            string expected = "42 -> 23 -> 16 -> 15 -> 8 -> 4 -> 5 -> NULL";
+            Assert.Equal(expected, list.ToString());
+
         }
     }
 }
