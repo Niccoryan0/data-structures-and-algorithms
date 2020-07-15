@@ -4,9 +4,9 @@
 
 ### C#:
 
-- [Challenge: Insert and shift an array](Challenges/C#/ArrayShift)
+- [Challenge: Insert and shift an array](/Challenges/C#/ArrayShift)
 - [Challenge: Binary Search](Challenges/C#/BinarySearch)
-- [Challenge: Linked Lists](Data-Structures/LinkedListLibrary)
+- [Challenge: Linked Lists](/Data-Structures/LinkedListLibrary)
 - [Codewars Katas](Challenges/C#/CodewarsKatas)
 
 ### JavaScript:
