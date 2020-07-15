@@ -7,6 +7,22 @@ namespace LinkedListsTests
 {
     public class UnitTest1
     {
+
+        [Fact]
+        public void CanCountNodes()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            int result = list.CountNodes();
+            Assert.Equal(6, result);
+        }
+
+
         [Fact]
         public void CanInstantiateEmptyLinkedList()
         {
@@ -187,7 +203,62 @@ namespace LinkedListsTests
             list.InsertAfter(4, 5);
             string expected = "42 -> 23 -> 16 -> 15 -> 8 -> 4 -> 5 -> NULL";
             Assert.Equal(expected, list.ToString());
+        }
 
+        [Fact]
+        public void CanReturnKthFromEndHappyPath()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            int result = list.KthFromEnd(3);
+            Assert.Equal(16, result);
+        }
+
+        [Fact]
+        public void CanReturnExceptionKGreaterThanListLength()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(5));
+            Assert.Equal("Invalid K", ex.Message);
+        }
+
+        [Fact]
+        public void CanReturnExceptionKEqualToListLength()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(4));
+            Assert.Equal("Invalid K", ex.Message);
+        }
+
+        [Fact]
+        public void ThrowForNegativeK()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            var ex = Assert.Throws<Exception>(() => list.KthFromEnd(-1));
+            Assert.Equal("K is negative", ex.Message);
+        }
+        [Fact]
+        public void CanHandleLinkedListSizeOneHappyPath()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            int result = list.KthFromEnd(0);
+            Assert.Equal(4, result);
         }
     }
 }
