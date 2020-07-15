@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Transactions;
 
 namespace LinkedListLibrary
 {
@@ -12,6 +15,19 @@ namespace LinkedListLibrary
         {
             Head = null;
             Current = Head;
+        }
+
+        public int CountNodes()
+        {
+            int counter = 0;
+            Current = Head;
+            while(Current != null)
+            {
+                counter++;
+                Current = Current.Next;
+            }
+            return counter;
+
         }
 
         /// <summary>
@@ -107,7 +123,6 @@ namespace LinkedListLibrary
                     Current = new Node(newVal);
                     Current.Next = temp.Next;
                     temp.Next = Current;
-                    break;
                 }
                 Current = Current.Next;
             }
@@ -128,10 +143,39 @@ namespace LinkedListLibrary
                     Node temp = Current.Next;
                     Current.Next = new Node(newVal);
                     Current.Next.Next = temp;
-                    break;
                 }
                 Current = Current.Next;
             }
+        }
+
+        public int KthFromEnd(int key)
+        {
+            if (key < 0)
+            {
+                throw new Exception("K is negative");
+            }
+            Current = Head;
+            Node lead = Head;
+            int k = key;
+            while (k > 0)
+            {
+                if (lead.Next != null)
+                {
+                    k--;
+                    lead = lead.Next;
+                }
+                else
+                {
+                    throw new Exception("Invalid K");
+                }
+            }
+            while (lead.Next != null)
+            {
+                Current = Current.Next;
+                lead = lead.Next;
+            }
+            return Current.Value;
+
         }
     }
 }
