@@ -159,6 +159,11 @@ namespace LinkedListLibrary
             }
         }
 
+        /// <summary>
+        /// Finds the node at a given distance from the end of the linked list
+        /// </summary>
+        /// <param name="key">Places from end of list</param>
+        /// <returns>Node value at given distance from end of list</returns>
         public int KthFromEnd(int key)
         {
             if (key < 0)
