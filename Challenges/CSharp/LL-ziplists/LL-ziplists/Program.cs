@@ -15,7 +15,7 @@ namespace LL_ziplists
         /// <param name="listA">listA list</param>
         /// <param name="listB">listB list</param>
         /// <returns>New Linked List with alternating values from supplied lists</returns>
-        public static Node Zip(LinkedList listA, LinkedList listB)
+        public static LinkedList Zip(LinkedList listA, LinkedList listB)
         {
             LinkedList result = new LinkedList();
             Node CurrentA = listA.Head;
@@ -23,10 +23,10 @@ namespace LL_ziplists
             result.Current = result.Head;
             if (CurrentA == null)
             {
-                return listB.Head;
+                return listB;
             } else if (CurrentB == null)
             {
-                return listA.Head;
+                return listA;
             }
             while (CurrentA != null || CurrentB != null)
             {
@@ -53,7 +53,7 @@ namespace LL_ziplists
                     CurrentB = CurrentB.Next;
                 }
             }
-            return result.Head;
+            return result;
         }
     }
 }
