@@ -5,11 +5,11 @@
 ### C#:
 
 
-- [Challenge: Insert and shift an array](Challenges/C#/ArrayShift)
-- [Challenge: Binary Search](Challenges/C#/BinarySearch)
-- [Challenge: Zip Lists](Challenges/C#/LL-ziplists)
+- [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
+- [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
+- [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
-- [Codewars Katas](Challenges/C#/CodewarsKatas)
+- [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
 
 ### JavaScript:
