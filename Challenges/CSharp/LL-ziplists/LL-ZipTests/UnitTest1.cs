@@ -26,7 +26,7 @@ namespace LL_ZipTests
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "13 -> 34 -> 29 -> 1 -> NULL";
+            string expected = "29 -> 1 -> 13 -> 34 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -42,6 +42,7 @@ namespace LL_ZipTests
             listB.Insert(54);
             listB.Insert(540);
             listB.Insert(32);
+            listB.Insert(60);
 
 
             Node answer = Zip(listA, listB);
@@ -49,7 +50,7 @@ namespace LL_ZipTests
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "54 -> 12 -> 540 -> 65 -> 32 -> NULL";
+            string expected = "12 -> 54 -> 65 -> 540 -> 32 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -71,7 +72,7 @@ namespace LL_ZipTests
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "5 -> 15 -> 1 -> 50 -> 10 -> NULL";
+            string expected = "5 -> 1 -> 15 -> 10 -> 50 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -106,7 +107,7 @@ namespace LL_ZipTests
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "100 -> 12 -> 23 -> NULL";
+            string expected = "23 -> 12 -> 100 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -117,16 +118,16 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(100);
-            listA.Insert(12);
-            listA.Insert(23);
+            listB.Insert(100);
+            listB.Insert(12);
+            listB.Insert(23);
 
             Node answer = Zip(listA, listB);
 
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "100 -> 12 -> 23 -> NULL";
+            string expected = "23 -> 12 -> 100 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }

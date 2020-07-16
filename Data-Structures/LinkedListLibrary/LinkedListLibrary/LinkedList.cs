@@ -87,14 +87,25 @@ namespace LinkedListLibrary
         public void Append(int val)
         {
             Current = Head;
-            while (Current != null)
+            if (Current == null)
             {
-                if (Current.Next == null)
+                Node node = new Node(val);
+                node.Next = Head;
+                Head = node;
+                Current = Head;
+            }
+            else
+            {
+                while (Current != null)
                 {
-                    Current.Next = new Node(val);
-                    break;
+                    if (Current.Next == null)
+                    {
+                        Current.Next = new Node(val);
+                        break;
+                    }
+                    Current = Current.Next;
                 }
-                Current = Current.Next;
+
             }
 
         }
