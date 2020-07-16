@@ -15,18 +15,18 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(13);
-            listA.Insert(29);
+            listA.Append(29);
+            listA.Append(13);
 
-            listB.Insert(34);
-            listB.Insert(1);
+            listB.Append(1);
+            listB.Append(34);
 
             Node answer = Zip(listA, listB);
 
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "13 -> 34 -> 29 -> 1 -> NULL";
+            string expected = "29 -> 1 -> 13 -> 34 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -36,12 +36,13 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(12);
-            listA.Insert(65);
+            listA.Append(65);
+            listA.Append(12);
 
-            listB.Insert(54);
-            listB.Insert(540);
-            listB.Insert(32);
+            listB.Append(60);
+            listB.Append(32);
+            listB.Append(540);
+            listB.Append(54);
 
 
             Node answer = Zip(listA, listB);
@@ -49,7 +50,7 @@ namespace LL_ZipTests
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "54 -> 12 -> 540 -> 65 -> 32 -> NULL";
+            string expected = "65 -> 60 -> 12 -> 32 -> 540 -> 54 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -59,19 +60,22 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(5);
-            listA.Insert(15);
-            listA.Insert(50);
+            listA.Append(50);
+            listA.Append(15);
+            listA.Append(5);
+            listA.Append(99);
+            listA.Append(20);
 
-            listB.Insert(1);
-            listB.Insert(10);
+
+            listB.Append(10);
+            listB.Append(1);
 
             Node answer = Zip(listA, listB);
 
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "5 -> 15 -> 1 -> 50 -> 10 -> NULL";
+            string expected = "50 -> 10 -> 15 -> 1 -> 5 -> 99 -> 20 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -97,16 +101,16 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(100);
-            listA.Insert(12);
-            listA.Insert(23);
+            listA.Append(23);
+            listA.Append(12);
+            listA.Append(100);
 
             Node answer = Zip(listA, listB);
 
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "100 -> 12 -> 23 -> NULL";
+            string expected = "23 -> 12 -> 100 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }
@@ -117,16 +121,16 @@ namespace LL_ZipTests
             LinkedList listA = new LinkedList();
             LinkedList listB = new LinkedList();
 
-            listA.Insert(100);
-            listA.Insert(12);
-            listA.Insert(23);
+            listB.Append(23);
+            listB.Append(12);
+            listB.Append(100);
 
             Node answer = Zip(listA, listB);
 
             LinkedList linkedListResult = new LinkedList();
             linkedListResult.Head = answer;
 
-            string expected = "100 -> 12 -> 23 -> NULL";
+            string expected = "23 -> 12 -> 100 -> NULL";
 
             Assert.Equal(expected, linkedListResult.ToString());
         }

@@ -131,6 +131,16 @@ namespace LinkedListsTests
         }
 
         [Fact]
+        public void CanAppendToEmpty()
+        {
+            LinkedList list = new LinkedList();
+            list.Append(3);
+            string result = "3 -> NULL";
+            Assert.Equal(result, list.ToString());
+
+        }
+
+        [Fact]
         public void CanInsertNodeBefore()
         {
             LinkedList list = new LinkedList();
