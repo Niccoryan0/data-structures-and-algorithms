@@ -2,7 +2,7 @@
 using LinkedListLibrary;
 namespace LL_ziplists
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -12,13 +12,13 @@ namespace LL_ziplists
         /// <summary>
         /// Zip two linked lists together
         /// </summary>
-        /// <param name="listA">First list</param>
-        /// <param name="listB">Second list</param>
+        /// <param name="listA">listA list</param>
+        /// <param name="listB">listB list</param>
         /// <returns>New Linked List with alternating values from supplied lists</returns>
-        public static LinkedList Zip(LinkedList listA, LinkedList listB)
+        public static Node Zip(LinkedList listA, LinkedList listB)
         {
-            LinkedList result = new LinkedList();
-            result.Current = result.Head;
+            LinkedList newLinkedList = new LinkedList();
+            newLinkedList.Current = newLinkedList.Head;
             Node CurrentA = listA.Head;
             Node CurrentB = listB.Head;
 
@@ -26,19 +26,19 @@ namespace LL_ziplists
             {
                 if (CurrentA != null && CurrentB != null)
                 {
-                    result.Insert(CurrentB.Value);
-                    result.Insert(CurrentA.Value);
+                    newLinkedList.Insert(CurrentB.Value);
+                    newLinkedList.Insert(CurrentA.Value);
                     CurrentB = CurrentB.Next;
                     CurrentA = CurrentA.Next;
                 }
                 else if (CurrentA != null && CurrentB == null)
                 {
-                    result.Insert(CurrentA.Value);
+                    newLinkedList.Insert(CurrentA.Value);
                     CurrentA = CurrentA.Next;
                 }
                 else if (CurrentA == null && CurrentB != null)
                 {
-                    result.Insert(CurrentB.Value);
+                    newLinkedList.Insert(CurrentB.Value);
                     CurrentB = CurrentB.Next;
                 }
                 else
@@ -47,7 +47,7 @@ namespace LL_ziplists
                     CurrentB = CurrentB.Next;
                 }
             }
-            return result;
+            return newLinkedList.Head;
         }
     }
 }
