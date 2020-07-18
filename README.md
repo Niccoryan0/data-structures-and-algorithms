@@ -4,12 +4,13 @@
 
 ### C#:
 
-- [Challenge: Insert and shift an array](Challenges/C#/ArrayShift)
-- [Challenge: Binary Search](Challenges/C#/BinarySearch)
-- [Challenge: Zip Lists](Challenges/C#/LL-ziplists)
+- [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
+- [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
+- [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
 - [Codewars Katas](Challenges/C#/CodewarsKatas)
+
 
 ### JavaScript:
 
