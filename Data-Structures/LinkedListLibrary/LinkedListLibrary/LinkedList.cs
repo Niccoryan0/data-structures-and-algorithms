@@ -21,7 +21,7 @@ namespace LinkedListLibrary
         {
             int counter = 0;
             Current = Head;
-            while(Current != null)
+            while (Current != null)
             {
                 counter++;
                 Current = Current.Next;
@@ -192,6 +192,20 @@ namespace LinkedListLibrary
             }
             return Current.Value;
 
+        }
+
+        public void Reverse()
+        {
+            Current = Head;
+            Node newHead = null;
+            while (Current != null)
+            {
+                Node tmp = Current.Next;
+                Current.Next = newHead;
+                newHead = Current;
+                Current = tmp;
+            }
+            Head = newHead;
         }
     }
 }
