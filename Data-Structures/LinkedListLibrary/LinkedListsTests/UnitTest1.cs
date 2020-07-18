@@ -270,5 +270,21 @@ namespace LinkedListsTests
             int result = list.KthFromEnd(0);
             Assert.Equal(4, result);
         }
+
+        [Fact]
+        public void CanReverseList()
+        {
+            LinkedList list = new LinkedList();
+            list.Insert(4);
+            list.Insert(8);
+            list.Insert(15);
+            list.Insert(16);
+            list.Insert(23);
+            list.Insert(42);
+            list.Reverse();
+            string expected = "4 -> 8 -> 15 -> 16 -> 23 -> 42 -> NULL";
+            Assert.Equal(expected, list.ToString());
+
+        }
     }
 }

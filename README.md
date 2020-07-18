@@ -8,7 +8,9 @@
 - [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
 - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
-- [Codewars Katas](Challenges/CSharp/CodewarsKatas)
+- [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
+- [Codewars Katas](Challenges/C#/CodewarsKatas)
+
 
 ### JavaScript:
 

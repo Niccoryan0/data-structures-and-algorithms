@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StacksAndQueues", "StacksAndQueues\StacksAndQueues.csproj", "{234E1E5F-C4FE-416F-8156-E74FE13AA80C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StacksAndQueuesTests", "StacksAndQueuesTests\StacksAndQueuesTests.csproj", "{B2AB39E3-B18C-45DE-867E-1751434D7AB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{234E1E5F-C4FE-416F-8156-E74FE13AA80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234E1E5F-C4FE-416F-8156-E74FE13AA80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234E1E5F-C4FE-416F-8156-E74FE13AA80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234E1E5F-C4FE-416F-8156-E74FE13AA80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2AB39E3-B18C-45DE-867E-1751434D7AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AB39E3-B18C-45DE-867E-1751434D7AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AB39E3-B18C-45DE-867E-1751434D7AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AB39E3-B18C-45DE-867E-1751434D7AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D87F9D3A-A8D8-4698-86DE-58467EEEA90A}
+	EndGlobalSection
+EndGlobal
