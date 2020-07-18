@@ -17,7 +17,7 @@ namespace StacksAndQueues
 
         public string Pop()
         {
-            if(Top == null)
+            if(IsEmpty())
             {
                 throw new Exception("Empty stack");
             }
@@ -25,5 +25,21 @@ namespace StacksAndQueues
             Top = Top.Next;
             return result;
         }
+
+        public string Peek()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Empty stack");
+            }
+            return Top.Value;
+        }
+
+        public bool IsEmpty()
+        {
+            bool result = Top == null ? true : false;
+            return result;
+        }
+
     }
 }

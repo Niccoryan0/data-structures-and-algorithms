@@ -54,8 +54,40 @@ namespace StacksAndQueuesTests
             Assert.Equal("stackin", result1);
             Assert.Equal("world", result2);
             Assert.Equal("hello", result3);
-            Assert.Null(stack.Top);
+            Assert.True(stack.IsEmpty());
         }
 
+        [Fact]
+        public void CanPeekTopNode()
+        {
+            Stack stack = new Stack();
+            stack.Push("hello");
+            stack.Push("world");
+            stack.Push("stackin");
+            string result = stack.Peek();
+
+            Assert.Equal("stackin", result);
+        }
+
+        [Fact]
+        public void CanCreateEmptyStack()
+        {
+            Stack stack = new Stack();
+
+            Assert.True(stack.IsEmpty());
+        }
+
+        [Fact]
+        public void CanThrowExceptionOnEmptyStack()
+        {
+            Stack stack = new Stack();
+
+            var resultPop = Assert.Throws<Exception>(() => stack.Pop());
+            var resultPeek = Assert.Throws<Exception>(() => stack.Peek());
+
+            Assert.Equal("Empty stack", resultPop.Message);
+            Assert.Equal("Empty stack", resultPeek.Message);
+
+        }
     }
 }
