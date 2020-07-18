@@ -78,10 +78,14 @@ namespace StacksAndQueuesTests
         }
 
         [Fact]
-        public void CanInstantiateEmptyQueue()
+        public void CanThrowExceptionPeekingAndDequeuingEmpty()
         {
             Queue queue = new Queue();
-            Assert.True(queue.IsEmpty());
+            var resultPop = Assert.Throws<Exception>(() => queue.Dequeue());
+            var resultPeek = Assert.Throws<Exception>(() => queue.Peek());
+
+            Assert.Equal("Empty queue", resultPop.Message);
+            Assert.Equal("Empty queue", resultPeek.Message);
         }
     }
 }

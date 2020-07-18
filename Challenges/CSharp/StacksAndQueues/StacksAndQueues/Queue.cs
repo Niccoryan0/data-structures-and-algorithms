@@ -34,6 +34,10 @@ namespace StacksAndQueues
             }
         }
 
+        /// <summary>
+        /// Remove front node from queue
+        /// </summary>
+        /// <returns>Value of removed node</returns>
         public string Dequeue()
         {
             if (IsEmpty())
@@ -45,6 +49,10 @@ namespace StacksAndQueues
             return result;
         }
 
+        /// <summary>
+        /// Return top value of a queue or throw exception if empty
+        /// </summary>
+        /// <returns>Value of top node in queue</returns>
         public string Peek()
         {
             if (IsEmpty())
@@ -54,6 +62,10 @@ namespace StacksAndQueues
             return Front.Value;
         }
 
+        /// <summary>
+        /// Check if a queue is empty
+        /// </summary>
+        /// <returns>Boolean for if queue is empty</returns>
         public bool IsEmpty()
         {
             bool result = Front == null ? true : false;
