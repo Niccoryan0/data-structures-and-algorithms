@@ -12,7 +12,7 @@ namespace StacksAndQueuesTests
             Stack stack = new Stack();
             stack.Push("hello");
 
-            Assert.Equal("hello", stack.Top.Value);
+            Assert.Equal("hello", stack.Peek());
         }
 
         [Fact]
@@ -24,8 +24,7 @@ namespace StacksAndQueuesTests
             stack.Push("stackin");
 
 
-            Assert.Equal("stackin", stack.Top.Value);
-            Assert.Equal("world", stack.Top.Next.Value);
+            Assert.Equal("stackin", stack.Peek());
         }
 
         [Fact]

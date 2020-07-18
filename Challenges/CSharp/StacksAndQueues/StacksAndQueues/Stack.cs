@@ -6,15 +6,23 @@ namespace StacksAndQueues
 {
     public class Stack
     {
-        public Node Top { get; set; }
+        private Node Top { get; set; }
 
+        /// <summary>
+        /// Push a node to the top of the stack.
+        /// </summary>
+        /// <param name="value">Value to be stored in the node</param>
         public void Push(string value)
         {
             Node node = new Node(value);
             node.Next = Top;
             Top = node;
         }
-
+        
+        /// <summary>
+        /// Pop the top value of the Stack or throws an exception if empty.
+        /// </summary>
+        /// <returns>Popped node's value</returns>
         public string Pop()
         {
             if(IsEmpty())
@@ -26,6 +34,10 @@ namespace StacksAndQueues
             return result;
         }
 
+        /// <summary>
+        /// Return the top node's value or throws an exception if empty.
+        /// </summary>
+        /// <returns></returns>
         public string Peek()
         {
             if (IsEmpty())
@@ -35,6 +47,10 @@ namespace StacksAndQueues
             return Top.Value;
         }
 
+        /// <summary>
+        /// Check if the stack is empty and return boolean
+        /// </summary>
+        /// <returns>Boolean for if stack is empty</returns>
         public bool IsEmpty()
         {
             bool result = Top == null ? true : false;
