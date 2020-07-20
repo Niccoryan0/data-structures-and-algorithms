@@ -6,7 +6,7 @@ namespace StacksAndQueues
 {
     public class Stack
     {
-        private Node Top { get; set; }
+        public Node Top { get; set; }
 
         /// <summary>
         /// Push a node to the top of the stack.
