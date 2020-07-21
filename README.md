@@ -9,8 +9,9 @@
 - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
-- [Codewars Katas](Challenges/C#/CodewarsKatas)
+- [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
 
+- [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
 ### JavaScript:
 
@@ -38,4 +39,3 @@
 - [Challenge: Simple Pig Latin](Challenges/Python/SimplePigLatin)
 - [Challenge: Sum of Digits](Challenges/Python/SumOfDigits)
 - [Challenge: Your Order Please](Challenges/Python/YourOrderPlease)
-

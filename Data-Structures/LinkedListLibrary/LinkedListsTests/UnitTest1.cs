@@ -284,7 +284,6 @@ namespace LinkedListsTests
             list.Reverse();
             string expected = "4 -> 8 -> 15 -> 16 -> 23 -> 42 -> NULL";
             Assert.Equal(expected, list.ToString());
-
         }
     }
 }
