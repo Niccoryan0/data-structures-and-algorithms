@@ -10,12 +10,6 @@ namespace QueueWithStacks
         public Stack Stack1 { get; set; } = new Stack();
         public Stack Stack2 { get; set; } = new Stack();
         public Node Front { get; set; }
-        public Node Rear { get; set; }
-
-        public PseudoQueue()
-        {
-            Rear = Front;
-        }
 
         public void Enqueue(string val)
         {
@@ -23,7 +17,6 @@ namespace QueueWithStacks
             {
                 Stack1.Push(val);
                 Front = Stack1.Top;
-                Rear = Stack1.Top;
             } else
             {
                 while(Stack1.Top != null)
@@ -31,7 +24,6 @@ namespace QueueWithStacks
                     Stack2.Push(Stack1.Pop());
                 }
                 Stack1.Push(val);
-                Rear = Stack1.Top;
                 while (Stack2.Top != null)
                 {
                     Stack1.Push(Stack2.Pop());
@@ -49,12 +41,6 @@ namespace QueueWithStacks
             else
             {
                 string result = Stack1.Pop();
-                Node current = Stack1.Top;
-                while (current != null)
-                {
-                    current = current.Next;
-                }
-                Rear = current;
                 Front = Stack1.Top;
                 return result;
             }

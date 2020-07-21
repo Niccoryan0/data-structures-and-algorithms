@@ -1,4 +1,4 @@
-# Zip Linked Lists
+# PsuedoQueue
 *Author: Nicco Ryan*
 
 ---
@@ -13,16 +13,17 @@ Shuffle values from one Stack to the other to simulate a front and back of the Q
 ### Big O
 
 
-| Time | Space |
-| :----------- | :----------- |
-| O(n) | O(n) |
+| Method | Time | Space |
+| :----------- | :----------- | :----------- |
+| Enqueue | O(n) | O(n) |
+| Dequeue | O(1) | O(n) |
 
 
 ---
 
 
 ### Whiteboard Visual
-![Zip Lists Whiteboard](../../../assets/PseudoQueueWB.png)
+![PsuedoQueue Whiteboard](../../../assets/PseudoQueueWB.png)
 *Made w/ Bade Habib & Bryant Davis*
 
 
