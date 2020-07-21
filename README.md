@@ -39,4 +39,3 @@
 - [Challenge: Simple Pig Latin](Challenges/Python/SimplePigLatin)
 - [Challenge: Sum of Digits](Challenges/Python/SumOfDigits)
 - [Challenge: Your Order Please](Challenges/Python/YourOrderPlease)
-
