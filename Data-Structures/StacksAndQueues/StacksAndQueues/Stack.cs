@@ -4,17 +4,17 @@ using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Stack
+    public class Stack<T>
     {
-        public Node Top { get; set; }
+        public Node<T> Top { get; set; }
 
         /// <summary>
         /// Push a node to the top of the stack.
         /// </summary>
         /// <param name="value">Value to be stored in the node</param>
-        public void Push(string value)
+        public void Push(T value)
         {
-            Node node = new Node(value);
+            Node<T> node = new Node<T>(value);
             node.Next = Top;
             Top = node;
         }
@@ -23,13 +23,13 @@ namespace StacksAndQueues
         /// Pop the top value of the Stack or throws an exception if empty.
         /// </summary>
         /// <returns>Popped node's value</returns>
-        public string Pop()
+        public T Pop()
         {
             if(IsEmpty())
             {
                 throw new Exception("Empty stack");
             }
-            string result = Top.Value;
+            T result = Top.Value;
             Top = Top.Next;
             return result;
         }
@@ -38,7 +38,7 @@ namespace StacksAndQueues
         /// Return the top node's value or throws an exception if empty.
         /// </summary>
         /// <returns></returns>
-        public string Peek()
+        public T Peek()
         {
             if (IsEmpty())
             {
