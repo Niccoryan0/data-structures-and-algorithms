@@ -12,8 +12,27 @@ namespace MultiBracketValidationTests
         [InlineData("()[[Extra Characters]]	")]
         [InlineData("(){}[[]]	")]
         [InlineData("{}{Code}[Fellows](())	")]
-
         public void HappyPathSuccessful(string input)
+        {
+            bool result = MultiBracketValidator(input);
+            Assert.True(result);
+        }
+
+        [Theory]
+        [InlineData("[({}]")]
+        [InlineData("(](")]
+        [InlineData("{(})")]
+        public void FailsIncompleteBrackets(string input)
+        {
+            bool result = MultiBracketValidator(input);
+            Assert.False(result);
+        }
+
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("No brackets here")]
+        public void CanHandleNoBracketInput(string input)
         {
             bool result = MultiBracketValidator(input);
             Assert.True(result);

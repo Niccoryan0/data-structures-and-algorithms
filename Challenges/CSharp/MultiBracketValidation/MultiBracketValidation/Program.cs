@@ -8,7 +8,7 @@ namespace MultiBracketValidation
     {
         static void Main(string[] args)
         {
-            MultiBracketValidator("{}{Code}[Fellows](())	");
+            Console.WriteLine("Hello World!");
         }
         
         /// <summary>
@@ -24,7 +24,8 @@ namespace MultiBracketValidation
 
             foreach (char item in input)
             {
-                if(Array.Exists(left, x => x == item)){
+                if(Array.Exists(left, x => x == item))
+                {
                     storage.Add(right[Array.IndexOf(left, item)]);
                 }
                 else if (Array.Exists(right, x => x == item))
