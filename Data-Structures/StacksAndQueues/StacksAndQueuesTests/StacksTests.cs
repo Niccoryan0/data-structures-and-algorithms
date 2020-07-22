@@ -9,7 +9,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanPushToStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("hello");
 
             Assert.Equal("hello", stack.Peek());
@@ -18,7 +18,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanPushMultipleToStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("hello");
             stack.Push("world");
             stack.Push("stackin");
@@ -30,7 +30,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanPopFromStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("hello");
             stack.Push("world");
             stack.Push("stackin");
@@ -42,7 +42,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanEmptyAStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("hello");
             stack.Push("world");
             stack.Push("stackin");
@@ -59,7 +59,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanPeekTopNode()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
             stack.Push("hello");
             stack.Push("world");
             stack.Push("stackin");
@@ -71,7 +71,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanCreateEmptyStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             Assert.True(stack.IsEmpty());
         }
@@ -79,7 +79,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanThrowExceptionOnEmptyStack()
         {
-            Stack stack = new Stack();
+            Stack<string> stack = new Stack<string>();
 
             var resultPop = Assert.Throws<Exception>(() => stack.Pop());
             var resultPeek = Assert.Throws<Exception>(() => stack.Peek());

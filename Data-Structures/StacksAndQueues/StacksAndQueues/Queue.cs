@@ -4,10 +4,10 @@ using System.Text;
 
 namespace StacksAndQueues
 {
-    public class Queue
+    public class Queue<T>
     {
-        private Node Front { get; set; }
-        private Node Rear { get; set; }
+        private Node<T> Front { get; set; }
+        private Node<T> Rear { get; set; }
 
         public Queue()
         {
@@ -18,9 +18,9 @@ namespace StacksAndQueues
         /// Add a node to the end of the queue.
         /// </summary>
         /// <param name="val">Value to be placed in node</param>
-        public void Enqueue(string val)
+        public void Enqueue(T val)
         {
-            Node node = new Node(val);
+            Node<T> node = new Node<T>(val);
 
             if (Front == null)
             {
@@ -38,13 +38,13 @@ namespace StacksAndQueues
         /// Remove front node from queue
         /// </summary>
         /// <returns>Value of removed node</returns>
-        public string Dequeue()
+        public T Dequeue()
         {
             if (IsEmpty())
             {
                 throw new Exception("Empty queue");
             }
-            string result = Front.Value;
+            T result = Front.Value;
             Front = Front.Next;
             return result;
         }
@@ -53,7 +53,7 @@ namespace StacksAndQueues
         /// Return top value of a queue or throw exception if empty
         /// </summary>
         /// <returns>Value of top node in queue</returns>
-        public string Peek()
+        public T Peek()
         {
             if (IsEmpty())
             {

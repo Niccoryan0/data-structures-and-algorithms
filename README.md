@@ -7,9 +7,10 @@
 - [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
 - [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
 - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
+- [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
+- [Challenge: FIFO Animal Shelter](Challenges/CSharp/FIFOAnimalShelter)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
-- [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
 
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 

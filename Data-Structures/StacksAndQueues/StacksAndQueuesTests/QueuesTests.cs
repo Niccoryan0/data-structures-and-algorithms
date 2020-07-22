@@ -2,7 +2,6 @@
 using System.Collections;
 using Xunit;
 using StacksAndQueues;
-using Queue = StacksAndQueues.Queue;
 
 namespace StacksAndQueuesTests
 {
@@ -11,7 +10,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanEnqueueIntoQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Nicco");
 
@@ -21,7 +20,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanEnqueueMultipleIntoQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Nicco");
             queue.Enqueue("Ryan");
@@ -35,7 +34,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanDequeueFromQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Nicco");
             queue.Enqueue("Ryan");
@@ -49,7 +48,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanPeekIntoQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
             queue.Enqueue("Nicco");
             Assert.Equal("Nicco", queue.Peek());
         }
@@ -57,7 +56,7 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanEmptyQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
 
             queue.Enqueue("Nicco");
             queue.Enqueue("Ryan");
@@ -73,14 +72,14 @@ namespace StacksAndQueuesTests
         [Fact]
         public void CanInstantiateEmptyQueue()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
             Assert.True(queue.IsEmpty());
         }
 
         [Fact]
         public void CanThrowExceptionPeekingAndDequeuingEmpty()
         {
-            Queue queue = new Queue();
+            Queue<string> queue = new Queue<string>();
             var resultPop = Assert.Throws<Exception>(() => queue.Dequeue());
             var resultPeek = Assert.Throws<Exception>(() => queue.Peek());
 
