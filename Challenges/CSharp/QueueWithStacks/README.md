@@ -1,35 +1,34 @@
-# PsuedoQueue
+# FIFO Animal Shelter
 *Author: Nicco Ryan*
 
 ---
 
 ### Problem Domain
-#### Create a PseudoQueue which simulates Enqueuing and Dequeuing but use two stacks to accomplish the methods.
----
-### Approach 
-Shuffle values from one Stack to the other to simulate a front and back of the Queue and add/remove items appropriately.
+An animal shelter simulation than can take in dogs and cats and return specified types on dequeuing.
 
 ---
+
+
 ### Big O
 
 
 | Method | Time | Space |
 | :----------- | :----------- | :----------- |
-| Enqueue | O(n) | O(n) |
-| Dequeue | O(1) | O(n) |
+| Enqueue | O(1) | O(1) |
+| Dequeue | O(n) | O(n) |
 
 
 ---
 
 
 ### Whiteboard Visual
-![PsuedoQueue Whiteboard](../../../assets/PseudoQueueWB.png)
-*Made w/ Bade Habib & Bryant Davis*
+![PsuedoQueue Whiteboard](../../../assets/FIFOShelterWB.png)
+
 
 
 ---
 
 ### Change Log
-1.0: *Problem completed* - 7/20/2020 
+1.0: *Problem completed* - 7/21/2020 
 
 ---
