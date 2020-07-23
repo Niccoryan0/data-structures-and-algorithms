@@ -9,6 +9,7 @@
 - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
 - [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
 - [Challenge: FIFO Animal Shelter](Challenges/CSharp/FIFOAnimalShelter)
+- [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
 
