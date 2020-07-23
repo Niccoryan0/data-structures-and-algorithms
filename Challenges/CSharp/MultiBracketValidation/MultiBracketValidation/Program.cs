@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace MultiBracketValidation
 {
@@ -40,6 +41,11 @@ namespace MultiBracketValidation
                     }
                 }
             }
+            if (storage.Any())
+            {
+                return false;
+            }
+
             return true;
         }
     }
