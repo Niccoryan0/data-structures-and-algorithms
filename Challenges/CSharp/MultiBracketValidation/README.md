@@ -1,13 +1,22 @@
-# Multi-bracket Validation
+# Multi-Bracket Validation
 *Author: Nicco Ryan*
 
 ---
 
 ### Problem Domain
-Create a method that validates the brackets in an input string, returning true if all parenthesis, square brackets and curly braces are matched up syntactically.
+Given any string, return if the brackets within the string are arranged correctly, i.e. :"{[Words(more words)Some more stuff]stuff}" returns true.
 
 ---
 
+### Inputs and Expected Outputs
+
+| Input | Expected Output |
+| :----------- | :----------- |
+| "{[Words(more words)Some more stuff]stuff}" | true |
+| "({)}" | false |
+
+
+---
 
 ### Big O
 
@@ -15,6 +24,7 @@ Create a method that validates the brackets in an input string, returning true i
 | Time | Space |
 | :----------- | :----------- |
 | O(n) | O(1) |
+
 
 
 ---
@@ -25,10 +35,9 @@ Create a method that validates the brackets in an input string, returning true i
 *Made with Bade Habib & Robert Carter*
 
 
-
 ---
 
 ### Change Log
-1.0: *Problem completed* - 7/23/2020 
+1.0: *Problem completed* - 7/22/2020
 
 ---
