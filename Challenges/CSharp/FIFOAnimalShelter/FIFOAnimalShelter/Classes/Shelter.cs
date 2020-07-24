@@ -1,37 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Xml.XPath;
 using StacksAndQueues;
 
 namespace FIFOAnimalShelter.Classes
 {
-    public class Shelter : Queue<Animal>
+    public class Shelter 
     {
-        public Node<Animal> Front { get; set; }
-        public Node<Animal> Rear { get; set; }
+        private StacksAndQueues.Queue<Animal> TheShelter = new StacksAndQueues.Queue<Animal>();
+        public Animal Front { get; set; }
 
-        public Shelter()
-        {
-            Rear = Front;
-        }
-        /// <summary> 
+        /// <summary>
         /// Add a new animal to the shelter
         /// </summary>
         /// <param name="pet">Pet to be added</param>
         public void Enqueue(Animal pet)
         {
-            Node<Animal> animal = new Node<Animal>(pet);
-
-            if (Front == null)
-            {
-                Front = animal;
-                Rear = animal;
-            }
-            else
-            {
-                Rear.Next = animal;
-                Rear = animal;
-            }
+            TheShelter.Enqueue(pet);
+            Front = TheShelter.Peek();
         }
 
         /// <summary>
@@ -41,20 +28,21 @@ namespace FIFOAnimalShelter.Classes
         /// <returns>First pet in Shelter of specified type.</returns>
         public Animal Dequeue(string type)
         {
-            Node<Animal> temp = Front;
-            do
+
+            StacksAndQueues.Queue<Animal> Temp = TheShelter;
+            while(!Temp.IsEmpty())
             {
-                if (temp.Value.Species == type)
+                if(Temp.Peek().Species == type)
                 {
-                    Animal result = temp.Value;
-                    temp = temp.Next;
+                    Animal result = Temp.Dequeue();
+                    TheShelter = Temp;
                     return result;
                 }
                 else
                 {
                     Temp.Dequeue();
                 }
-            } while (Front != temp);
+            }
             return TheShelter.Dequeue();
         }
 
