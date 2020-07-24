@@ -23,20 +23,21 @@ Given any string, return if the brackets within the string are arranged correctl
 
 | Time | Space |
 | :----------- | :----------- |
-| O(n) | O(n) |
+| O(n) | O(1) |
+
 
 
 ---
 
 
 ### Whiteboard Visual
-![Array Shift Whiteboard](../../assets/MultiBracketValidationWB.png)
-*Made w/ Bade Habib & Robert Carter*
+![Multi-Bracket Validation Whiteboard](../../../assets/MultiBracketWB.png)
+*Made with Bade Habib & Robert Carter*
 
 
 ---
 
 ### Change Log
-1.0: *Problem completed* - 7/22/2020 
+1.0: *Problem completed* - 7/22/2020
 
 ---

@@ -21,7 +21,8 @@ namespace MultiBracketValidationTests
         [Theory]
         [InlineData("[({}]")]
         [InlineData("(](")]
-        [InlineData("{(})")]
+        [InlineData("((){}[[]]	")]
+        [InlineData("{{(})")]
         public void FailsIncompleteBrackets(string input)
         {
             bool result = MultiBracketValidator(input);
