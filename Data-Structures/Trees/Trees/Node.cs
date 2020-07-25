@@ -8,6 +8,9 @@ namespace Trees
         public Node<T> RC { get; set; }
         public T Value { get; set; }
 
-
+        public Node(T value)
+        {
+            Value = value;
+        }
     }
 }
