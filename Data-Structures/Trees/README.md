@@ -5,16 +5,18 @@
 ---
 
 ## Description
-#### A C# implementation of a binary tree with the ability to traverse it pre, in and post order.
+#### A C# implementation of a binary tree with the ability to traverse it pre, in and post order as well as a Binary Search Tree with Add and Contains methods.
 ---
 
 ## Methods
 
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
-| PreOrder | Adds a new `Node` to the top of the `Stack` | O(1) | O(1) | stack.Push("Nicco") |
-| InOrder | Removes and returns the value for the top `Node` in the `Stack` or throws an exception if the Stack is empty. | O(1) | O(1) | stack.Pop() |
-| PostOrder | Adds a new `Node` to the front of the `Queue` | O(n) | O(1) | queue.Enqueue("Nicco") |
+| Tree - PreOrder | Traverses the tree and returns the values in PreOrdered form in a List. | O(n) | O(n) | tree.PreOrder() |
+| Tree - InOrder | Traverses the tree and returns the values in InOrdered form in a List.  | O(n) | O(n) | tree.InOrder() |
+| Tree - PostOrder | Traverses the tree and returns the values in PostOrdered form in a List.  | O(n) | O(n) | tree.PostOrder() |
+| Binary Search Tree - Add | Adds a new `Node` with the specified value to the correct place in the Binary Search Tree | O(log n) | O(1) | binaryTree.Add(10) |
+| Binary Search Tree - Contains | Traverses a binary tree to search for a specified value and returns a boolean of whether it's found | O(n) | O(1) | binaryTree.Contains(1) |
 
 
 
