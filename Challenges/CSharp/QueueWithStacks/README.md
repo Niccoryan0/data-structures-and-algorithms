@@ -23,7 +23,7 @@ Simulate the behavior of a Queue using two stacks under the hood w/ Enqueue and 
 
 ### Whiteboard Visual
 ![PseudoQueue WB](../../../assets/PseudoQueueWB.png)
-
+*Made w/ Bade Habib and Bryant Davis*
 
 
 ---

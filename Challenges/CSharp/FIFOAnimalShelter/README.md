@@ -1,4 +1,4 @@
-# Queue
+# FIFO Animal Shelter
 *Author: Nicco Ryan*
 
 ---
