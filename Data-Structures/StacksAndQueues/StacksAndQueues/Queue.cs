@@ -6,8 +6,8 @@ namespace StacksAndQueues
 {
     public class Queue<T>
     {
-        private Node<T> Front { get; set; }
-        private Node<T> Rear { get; set; }
+        public Node<T> Front { get; set; }
+        public Node<T> Rear { get; set; }
 
         public Queue()
         {
@@ -60,6 +60,11 @@ namespace StacksAndQueues
                 throw new Exception("Empty queue");
             }
             return Front.Value;
+        }
+
+        public Node<T> GetFront()
+        {
+            return Front;
         }
 
         /// <summary>

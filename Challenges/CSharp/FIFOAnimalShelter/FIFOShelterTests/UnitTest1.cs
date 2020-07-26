@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using FIFOAnimalShelter.Classes;
+using StacksAndQueues;
 
 namespace AnimalShelterTests
 {
@@ -14,7 +15,7 @@ namespace AnimalShelterTests
             shelter.Enqueue(dog);
 
 
-            Assert.Equal(dog, shelter.Front);
+            Assert.Equal(dog, shelter.Animals.Peek());
         }
 
         [Fact]
@@ -38,7 +39,7 @@ namespace AnimalShelterTests
 
             shelter.Enqueue(cat);
 
-            Assert.Equal(cat, shelter.Front);
+            Assert.Equal(cat, shelter.Animals.Peek());
         }
 
         [Fact]
@@ -61,19 +62,23 @@ namespace AnimalShelterTests
         {
             Shelter shelter = new Shelter();
             Cat cat = new Cat("Moe");
+            Cat cat2 = new Cat("Moe2");
+            Cat cat3 = new Cat("Moe3");
+
+
             Dog dog = new Dog("Henry");
 
 
             shelter.Enqueue(cat);
-            shelter.Enqueue(cat);
+            shelter.Enqueue(cat2);
             shelter.Enqueue(dog);
-            shelter.Enqueue(cat);
+            shelter.Enqueue(cat3);
 
 
             Animal result = shelter.Dequeue("Dog");
 
 
-            Assert.Equal(result, dog);
+            Assert.Equal(dog, result);
         }
     }
 }

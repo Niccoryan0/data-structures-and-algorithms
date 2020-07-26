@@ -15,20 +15,22 @@ An animal shelter simulation than can take in dogs and cats and return specified
 | Method | Time | Space |
 | :----------- | :----------- | :----------- |
 | Enqueue | O(1) | O(1) |
-| Dequeue | O(n) | O(n) |
+| Dequeue | O(n) | O(1) |
 
 
 ---
 
 
 ### Whiteboard Visual
-![PsuedoQueue Whiteboard](../../../assets/FIFOShelterWB.png)
+![FIFO Shelter Whiteboard](../../../assets/FIFOShelterWB.png)
 
 
 
 ---
 
 ### Change Log
+1.2: *Fixed Dequeue* - 7/24/2020
+1.1: *Updated Solution - 7/22/2020*
 1.0: *Problem completed* - 7/21/2020 
 
 ---

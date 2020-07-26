@@ -8,5 +8,6 @@ namespace FIFOAnimalShelter.Classes
     {
         public string Species { get; set; }
         public string Name { get; set; }
+        public Animal Next { get; set; }
     }
 }
