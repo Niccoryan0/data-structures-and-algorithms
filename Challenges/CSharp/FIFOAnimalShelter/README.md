@@ -1,43 +1,36 @@
-# Multi-Bracket Validation
+# Queue
 *Author: Nicco Ryan*
 
 ---
 
 ### Problem Domain
-Given any string, return if the brackets within the string are arranged correctly, i.e. :"{[Words(more words)Some more stuff]stuff}" returns true.
+An animal shelter simulation than can take in dogs and cats and return specified types on dequeuing.
 
 ---
 
-### Inputs and Expected Outputs
-
-| Input | Expected Output |
-| :----------- | :----------- |
-| "{[Words(more words)Some more stuff]stuff}" | true |
-| "({)}" | false |
-
-
----
 
 ### Big O
 
 
-| Time | Space |
-| :----------- | :----------- |
-| O(n) | O(1) |
-
+| Method | Time | Space |
+| :----------- | :----------- | :----------- |
+| Enqueue | O(1) | O(1) |
+| Dequeue | O(n) | O(1) |
 
 
 ---
 
 
 ### Whiteboard Visual
-![Multi-Bracket Validation Whiteboard](../../../assets/MultiBracketWB.png)
-*Made with Bade Habib & Robert Carter*
+![FIFO Shelter Whiteboard](../../../assets/FIFOShelterWB.png)
+
 
 
 ---
 
 ### Change Log
-1.0: *Problem completed* - 7/22/2020
+1.2: *Fixed Dequeue* - 7/24/2020
+1.1: *Updated Solution - 7/22/2020*
+1.0: *Problem completed* - 7/22/2020 
 
 ---
