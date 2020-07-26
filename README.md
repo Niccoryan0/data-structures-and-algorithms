@@ -12,6 +12,7 @@
 - [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
+- [Data Structure: Trees](Data-Structures/Trees)
 
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
