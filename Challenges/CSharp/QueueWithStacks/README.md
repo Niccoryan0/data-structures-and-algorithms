@@ -1,10 +1,10 @@
-# FIFO Animal Shelter
+# Queue With Stacks
 *Author: Nicco Ryan*
 
 ---
 
 ### Problem Domain
-An animal shelter simulation than can take in dogs and cats and return specified types on dequeuing.
+Simulate the behavior of a Queue using two stacks under the hood w/ Enqueue and Dequeue methods.
 
 ---
 
@@ -14,23 +14,22 @@ An animal shelter simulation than can take in dogs and cats and return specified
 
 | Method | Time | Space |
 | :----------- | :----------- | :----------- |
-| Enqueue | O(1) | O(1) |
-| Dequeue | O(n) | O(1) |
+| Enqueue | O(n) | O(1) |
+| Dequeue | O(1) | O(1) |
 
 
 ---
 
 
 ### Whiteboard Visual
-![FIFO Shelter Whiteboard](../../../assets/FIFOShelterWB.png)
-
+![PseudoQueue WB](../../../assets/PseudoQueueWB.png)
+*Made w/ Bade Habib and Bryant Davis*
 
 
 ---
 
 ### Change Log
-1.2: *Fixed Dequeue* - 7/24/2020
-1.1: *Updated Solution - 7/22/2020*
-1.0: *Problem completed* - 7/21/2020 
+
+1.0: *Problem completed* - 7/22/2020 
 
 ---
