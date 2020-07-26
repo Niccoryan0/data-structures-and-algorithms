@@ -14,13 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FIFOAnimalShelter\FIFOAnimalShelter.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="StacksAndQueues">
-      <HintPath>..\..\..\..\Data-Structures\StacksAndQueues\StacksAndQueues\bin\Debug\netstandard2.0\StacksAndQueues.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Trees\Trees.csproj" />
   </ItemGroup>
 
 </Project>

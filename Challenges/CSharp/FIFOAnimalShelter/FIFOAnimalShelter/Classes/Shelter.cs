@@ -1,50 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
-using System.Xml.XPath;
 using StacksAndQueues;
 
 namespace FIFOAnimalShelter.Classes
 {
-    public class Shelter 
+    public class Shelter
     {
-        private StacksAndQueues.Queue<Animal> TheShelter = new StacksAndQueues.Queue<Animal>();
-        public Animal Front { get; set; }
+        public Queue<Animal> Animals { get; set; }
 
-        /// <summary>
-        /// Add a new animal to the shelter
-        /// </summary>
-        /// <param name="pet">Pet to be added</param>
-        public void Enqueue(Animal pet)
+        public Shelter()
         {
-            TheShelter.Enqueue(pet);
-            Front = TheShelter.Peek();
+            Animals = new Queue<Animal>();
         }
 
-        /// <summary>
-        /// Removes an animal of specified type from the shelter.
-        /// </summary>
-        /// <param name="type">Type of pet desired</param>
-        /// <returns>First pet in Shelter of specified type.</returns>
+        public void Enqueue(Animal animal)
+        {
+            Animals.Enqueue(animal);
+        }
+
         public Animal Dequeue(string type)
         {
-
-            StacksAndQueues.Queue<Animal> Temp = TheShelter;
-            while(!Temp.IsEmpty())
+            Animal frontTemp = Animals.Peek();
+            Animal result = null;
+            do
             {
-                if(Temp.Peek().Species == type)
+                Animal dequeued = Animals.Dequeue();
+                if(result == null && dequeued.Species == type)
                 {
-                    Animal result = Temp.Dequeue();
-                    TheShelter = Temp;
-                    return result;
-                }
-                else
+                    result = dequeued;
+                    if (Animals.IsEmpty()) return result;
+                }else
                 {
-                    Temp.Dequeue();
+                    Animals.Enqueue(dequeued);
                 }
-            }
-            return TheShelter.Dequeue();
+            } while (Animals.Peek() != frontTemp);
+            return result;
         }
-
     }
 }
