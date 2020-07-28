@@ -12,9 +12,10 @@
 
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
-| Tree - PreOrder | Traverses the tree and returns the values in PreOrdered form in a List. | O(n) | O(n) | tree.PreOrder() |
-| Tree - InOrder | Traverses the tree and returns the values in InOrdered form in a List.  | O(n) | O(n) | tree.InOrder() |
-| Tree - PostOrder | Traverses the tree and returns the values in PostOrdered form in a List.  | O(n) | O(n) | tree.PostOrder() |
+| Tree - PreOrder | Traverses the tree and returns the values in PreOrdered form in a List. | O(n) | O(n) | tree.PreOrder(tree.Root) |
+| Tree - InOrder | Traverses the tree and returns the values in InOrdered form in a List.  | O(n) | O(n) | tree.InOrder(tree.Root) |
+| Tree - PostOrder | Traverses the tree and returns the values in PostOrdered form in a List.  | O(n) | O(n) | tree.PostOrder(tree.Root) |
+| Tree(integers) - FindMaximumValue | Traverses a tree full of integer values and returns the Maximum value.  | O(n) | O(1) | tree.FindMaximumValue(tree.Root) |
 | Binary Search Tree - Add | Adds a new `Node` with the specified value to the correct place in the Binary Search Tree | O(log n) | O(1) | binaryTree.Add(10) |
 | Binary Search Tree - Find | Traverses a binary tree to search for a specified value and returns the value if it's found | O(n) | O(h) | binaryTree.Find(1) |
 | Binary Search Tree - Contains | Traverses a binary tree to search for a specified value and returns a boolean of whether it's found | O(n) | O(h) | binaryTree.Contains(1) |
