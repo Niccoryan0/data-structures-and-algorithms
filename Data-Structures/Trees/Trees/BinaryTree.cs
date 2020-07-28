@@ -38,26 +38,28 @@ namespace Trees
             }
         }
 
-        public bool Contains(int value)
+        public Node<int> Find(int value)
         {
-            return Contains(value, Root);
+            return Find(value, Root);
         }
 
-        public bool Contains(int value, Node<int> node)
+        public Node<int> Find(int value, Node<int> node)
         {
             if (node != null)
             {
-                if (value == node.Value) return true;
+                if (value == node.Value) return node;
                 if (value < node.Value)
                 {
-                    return Contains(value, node.LC);
+                    return Find(value, node.LC);
                 }
                 else
                 {
-                    return Contains(value, node.RC);
+                    return Find(value, node.RC);
                 }
             }
-            return false;
+            return null;
         }
+
+
     }
 }
