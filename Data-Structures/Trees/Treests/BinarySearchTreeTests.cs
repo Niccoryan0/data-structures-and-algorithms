@@ -73,5 +73,36 @@ namespace Treests
 
             Assert.Null(result);
         }
+
+        [Fact]
+        public void ContainReturnsTrueIfNodeInTree()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Add(100);
+            tree.Add(50);
+            tree.Add(150);
+            tree.Add(25);
+            tree.Add(75);
+
+            bool result = tree.Contains(75);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void ContainReturnsFalseIfNodeNotInTree()
+        {
+            BinaryTree tree = new BinaryTree();
+            tree.Add(100);
+            tree.Add(50);
+            tree.Add(150);
+            tree.Add(25);
+            tree.Add(75);
+
+            bool result = tree.Contains(80);
+
+            Assert.False(result);
+        }
+
     }
 }

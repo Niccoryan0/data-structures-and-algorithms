@@ -26,7 +26,7 @@ namespace Trees
             return result;
         }
 
-        private void PreOrder(List<T> result, Node<T> root) 
+        private void PreOrder(List<T> result, Node<T> root)
         {
             result.Add(root.Value);
             if (root.LC != null)
@@ -78,5 +78,27 @@ namespace Trees
             }
             result.Add(root.Value);
         }
+
+        public int FindMaximumValue(Node<int> root)
+        {
+            if (root == null)
+            {
+                return int.MinValue;
+            }
+            int result = root.Value;
+            int left = FindMaximumValue(root.LC);
+            int right = FindMaximumValue(root.RC);
+            if (result < left)
+            {
+                result = left;
+            }
+            if (result < right)
+            {
+                result = right;
+            }
+            return result;
+        }
+
+
     }
 }

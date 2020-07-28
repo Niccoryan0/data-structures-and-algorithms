@@ -60,6 +60,29 @@ namespace Trees
             return null;
         }
 
+        public bool Contains(int value)
+        {
+            return Contains(value, Root);
+        }
+
+        public bool Contains(int value, Node<int> node)
+        {
+            if (node != null)
+            {
+                if (value == node.Value) return true;
+                if (value < node.Value)
+                {
+                    return Contains(value, node.LC);
+                }
+                else
+                {
+                    return Contains(value, node.RC);
+                }
+            }
+            return false;
+        }
+
+
 
     }
 }
