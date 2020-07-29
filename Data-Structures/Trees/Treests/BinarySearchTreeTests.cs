@@ -10,14 +10,14 @@ namespace Treests
         [Fact]
         public void CanInstantiateAnEmptyBST()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             Assert.Null(tree.Root);
         }
 
         [Fact]
         public void CanAddNodeToBST()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             Assert.Equal(100, tree.Root.Value);
         }
@@ -25,7 +25,7 @@ namespace Treests
         [Fact]
         public void CanAddMultipleNodesToBST()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             tree.Add(50);
             tree.Add(150);
@@ -47,7 +47,7 @@ namespace Treests
         [Fact]
         public void CanFindNodeInBST()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             tree.Add(50);
             tree.Add(150);
@@ -62,7 +62,7 @@ namespace Treests
         [Fact]
         public void CanReturnNullIfNodeNodeFound()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             tree.Add(50);
             tree.Add(150);
@@ -77,7 +77,7 @@ namespace Treests
         [Fact]
         public void ContainReturnsTrueIfNodeInTree()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             tree.Add(50);
             tree.Add(150);
@@ -92,7 +92,7 @@ namespace Treests
         [Fact]
         public void ContainReturnsFalseIfNodeNotInTree()
         {
-            BinaryTree tree = new BinaryTree();
+            BinarySearchTree tree = new BinarySearchTree();
             tree.Add(100);
             tree.Add(50);
             tree.Add(150);
