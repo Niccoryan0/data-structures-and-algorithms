@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSort", "InsertionSort\InsertionSort.csproj", "{4F38D00C-A45C-4E29-B03C-E04AD87CE399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSortTests", "InsertionSortTests\InsertionSortTests.csproj", "{FEB06ACD-54D4-4750-9B31-8ADEBAC1ACDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F38D00C-A45C-4E29-B03C-E04AD87CE399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F38D00C-A45C-4E29-B03C-E04AD87CE399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F38D00C-A45C-4E29-B03C-E04AD87CE399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F38D00C-A45C-4E29-B03C-E04AD87CE399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB06ACD-54D4-4750-9B31-8ADEBAC1ACDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB06ACD-54D4-4750-9B31-8ADEBAC1ACDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB06ACD-54D4-4750-9B31-8ADEBAC1ACDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB06ACD-54D4-4750-9B31-8ADEBAC1ACDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EFE3E56-9158-4B13-9B9D-778D85E7774F}
+	EndGlobalSection
+EndGlobal
