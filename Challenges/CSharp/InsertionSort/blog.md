@@ -45,3 +45,11 @@ On this pass, 16 is first compared to 42, and found to be less, so the array at 
 **Pass 5**
 ![Fifth pass](../../../assets/Blog-26/fifth-step.png)
 On this pass, similar to the fourth pass, the temp is set to 15, which is compared to all of the previous values and moved back until it also reaches the position where j = 1, or the value 8, where it will evaluate to less than the temp, and the temp will be set to array at index j+1, or 2.
+
+After the fifth pass the outer for loop is completed and the array is fully sorted.
+
+## Efficiency
+- Time: O(n^2)
+  - This algorithm relies on a nested loop to make it's comparison. In the worst case, each index in the array will need to be checked against every other index, making it n squared for time.
+- Space: O(1)
+  - The array is sorted in place and no additional space is taken up, so it will be O(1) for space.
