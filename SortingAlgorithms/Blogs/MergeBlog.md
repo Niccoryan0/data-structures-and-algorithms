@@ -47,7 +47,7 @@ ALGORITHM Merge(left, right, arr)
 ```
 ---
 ## Visual
-![Merge Sort Visual](../../../assets/MergeSortVisual.png)
+![Merge Sort Visual](../../assets/MergeSortVisual.png)
 
 
 ### Start
