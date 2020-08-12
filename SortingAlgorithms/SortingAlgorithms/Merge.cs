@@ -6,6 +6,11 @@ namespace SortingAlgorithms
 {
     public class Merge
     {
+        /// <summary>
+        /// Merge sort an array, method is called recursively
+        /// </summary>
+        /// <param name="arr">Current array to be sorted</param>
+        /// <returns>Sorted array</returns>
         public static int[] MergeSort(int[] arr)
         {
             int n = arr.Length;
@@ -30,6 +35,13 @@ namespace SortingAlgorithms
             return arr;
         }
 
+        /// <summary>
+        /// Helper for MergeSort to handle the actual sorting of the subarrays
+        /// </summary>
+        /// <param name="left">Left sub-array</param>
+        /// <param name="right">Right sub-array</param>
+        /// <param name="arr">Current entire array</param>
+        /// <returns>Sorted array</returns>
         private static int[] MergeHelper(int[] left, int[] right, int[] arr)
         {
             int i = 0;
