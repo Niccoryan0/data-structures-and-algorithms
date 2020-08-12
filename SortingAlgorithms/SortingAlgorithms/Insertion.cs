@@ -4,6 +4,11 @@ namespace SortingAlgorithms
 {
     public class Insertion
     {
+        /// <summary>
+        /// Sort an array via Insertion Sorting
+        /// </summary>
+        /// <param name="arr">Array to be sorted</param>
+        /// <returns>Sorted array</returns>
         public static int[] InsertionSort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
