@@ -11,6 +11,7 @@ Reproduce several merging algorithms and create explanations/blog posts to descr
 
 [Merge Sort Blog Article](Blogs/MergeBlog.md)
 
+[Quick Sort Blog Article](Blogs/QuickBlog.md)
 
 ---
 
@@ -19,7 +20,8 @@ Reproduce several merging algorithms and create explanations/blog posts to descr
 | Method | Time | Space |
 | :----------- | :----------- | :----------- |
 | Insertion Sort | O(n^2) | O(1) |
-| Merge Sort Sort | O(n*log(n)) | O(n) |
+| Merge Sort | O(n*log(n)) | O(n) |
+| Quick Sort | O(n^2) | O(log(n)) |
 
 ---
 
