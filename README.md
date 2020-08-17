@@ -15,6 +15,7 @@
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
 - [Data Structure: Trees](Data-Structures/Trees)
+- [Data Structure: Hash Tables](Data-Structures/HashTable)
 
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
