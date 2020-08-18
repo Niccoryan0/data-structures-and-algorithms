@@ -8,6 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("GRID 1");
             char[,] grid = new char[,] { { 'N', 'E', 'S' }, { 'S', 'S', 'E' }, { 'S', 'W', 'N' } };
             var g1a1 = EscapeGrid(grid, 0, 0);
             var g1a2 = EscapeGrid(grid, 1, 1);
