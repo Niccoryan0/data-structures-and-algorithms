@@ -8,6 +8,11 @@ namespace RepeatedWord
 {
     public class RepeatedWord
     {
+        /// <summary>
+        /// Find and return the first repeated word in a string, or an empty string if inapplicable
+        /// </summary>
+        /// <param name="str">String to be searched for repeats</param>
+        /// <returns>First repeated word or an empty string</returns>
         public static string FindRepeat(string str)
         {
             List<string> tracker = new List<string>();
@@ -24,6 +29,11 @@ namespace RepeatedWord
             return "";
         }
 
+        /// <summary>
+        /// Count and order the total number of times each word occurs in a given string, then sort by count
+        /// </summary>
+        /// <param name="str">String to be counter and parsed</param>
+        /// <returns>List of words sorted by occurence in the string</returns>
         public static List<string> CountAndOrderWords(string str)
         {
             var removeCommas = Regex.Replace(str, ",", string.Empty);
