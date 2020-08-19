@@ -11,7 +11,7 @@
 - [Challenge: FIFO Animal Shelter](Challenges/CSharp/FIFOAnimalShelter)
 - [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
 - [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
-- [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
+- [Challenge: Repeated Words](Challenges/CSharp/RepeatedWord)
 - [Challenge: Repeated Words](Challenges/CSharp/TreeIntersection)
 
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
