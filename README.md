@@ -12,7 +12,7 @@
 - [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
 - [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
 - [Challenge: Repeated Words](Challenges/CSharp/RepeatedWord)
-- [Challenge: Repeated Words](Challenges/CSharp/TreeIntersection)
+- [Challenge: Tree Intersection](Challenges/CSharp/TreeIntersection)
 
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
