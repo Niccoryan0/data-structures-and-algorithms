@@ -15,16 +15,15 @@ namespace RepeatedWord
         /// <returns>First repeated word or an empty string</returns>
         public static string FindRepeat(string str)
         {
-            List<string> tracker = new List<string>();
-            var removeCommas = Regex.Replace(str, @"[^\w\s]", "");
-            foreach (string word in removeCommas.Split(' '))
+            HashSet<string> set = new HashSet<string>();
+            var removePunc = Regex.Replace(str, @"[^\w\s]", "");
+            foreach (string word in removePunc.Split(' '))
             {
                 // Can be done with a for loop checking each item if tracker if it equals the word, contains does the same under the hood
-                if (tracker.Contains(word.ToLower()))
+                if (!set.Add(word.ToLower()))
                 {
                     return word;
                 }
-                tracker.Add(word.ToLower());
             }
             return "";
         }
@@ -37,6 +36,8 @@ namespace RepeatedWord
         public static List<string> CountAndOrderWords(string str)
         {
             var removeCommas = Regex.Replace(str, ",", string.Empty);
+            HashSet<string> set = new HashSet<string>();
+            HashSet<int> countset = new HashSet<int>();
             Dictionary<string, int> counts = new Dictionary<string, int>();
 
             foreach (string word in removeCommas.Split(' '))
@@ -52,8 +53,6 @@ namespace RepeatedWord
             }
             var result = counts.OrderBy(x => x.Value).ToDictionary(key => key.Key, value => value.Value);
             return result.Keys.ToList();
-
         }
-
     }
 }
