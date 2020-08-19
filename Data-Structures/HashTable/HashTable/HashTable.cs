@@ -20,7 +20,7 @@ namespace HashTable
         /// </summary>
         /// <param name="key">Key to be hashed</param>
         /// <returns>Hashed index location</returns>
-        private int GetHash(string key)
+        public int GetHash(string key)
         {
             int total = 0;
             for (int i = 0; i < key.Length; i++)
@@ -32,7 +32,6 @@ namespace HashTable
             int index = primeValue % Map.Length;
 
             return index;
-
         }
 
         /// <summary>
