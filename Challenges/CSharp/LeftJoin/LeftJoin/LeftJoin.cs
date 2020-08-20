@@ -6,6 +6,12 @@ namespace LeftJoin
 {
     public class LeftJoin
     {
+        /// <summary>
+        /// Left Join two Hash Maps (Dictionaries)
+        /// </summary>
+        /// <param name="set1">First map</param>
+        /// <param name="set2">Second map</param>
+        /// <returns>Multidimensional string array with all values from first set and corresponding values if they exist in set2.</returns>
         public static string[,] Join(Dictionary<string, string> set1, Dictionary<string, string> set2)
         {
             string[,] result = new string[set1.Count, 3];
