@@ -14,13 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TreeIntersection\TreeIntersection.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Trees">
-      <HintPath>..\..\..\..\Data-Structures\Trees\Trees\bin\Debug\netstandard2.0\Trees.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\LeftJoin\LeftJoin.csproj" />
   </ItemGroup>
 
 </Project>

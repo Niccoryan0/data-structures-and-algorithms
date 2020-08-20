@@ -13,6 +13,7 @@
 - [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
 - [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
 - [Challenge: Repeated Words](Challenges/CSharp/TreeIntersection)
+- [Challenge: Left Join](Challenges/CSharp/LeftJoin)
 
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
