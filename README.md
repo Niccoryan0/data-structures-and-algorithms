@@ -12,11 +12,14 @@
 - [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
 - [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
 - [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
-- [Challenge: Repeated Words](Challenges/CSharp/TreeIntersection)
+- [Challenge: Tree Intersection](Challenges/CSharp/TreeIntersection)
 - [Challenge: Left Join](Challenges/CSharp/LeftJoin)
+
 
 - [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
+- [Data Structure: Trees](Data-Structures/Trees)
+- [Data Structure: Hash Tables](Data-Structures/HashTable)
 
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
