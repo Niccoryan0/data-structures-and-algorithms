@@ -14,7 +14,6 @@ namespace HashTable
             Map = new LinkedList<LinkedListNode<Node<T>>>[size];
         }
 
-
         /// <summary>
         /// Computes a hashed integer for a given key
         /// </summary>
