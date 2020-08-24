@@ -27,6 +27,18 @@ namespace HashTableTests
         }
 
         [Fact]
+        public void CanReturnNullForUnfoundValue()
+        {
+            HashTable<int> table = new HashTable<int>(16);
+            table.Add("Dave", 6);
+            table.Add("Kate", 7);
+            table.Add("Nicco", 10);
+
+            var result = table.Get("Henry");
+            Assert.Equal(0, result);
+        }
+
+        [Fact]
         public void CanFindContainedValue()
         {
             HashTable<int> table = new HashTable<int>(16);
