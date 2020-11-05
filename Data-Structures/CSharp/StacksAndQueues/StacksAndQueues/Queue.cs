@@ -29,6 +29,7 @@ namespace StacksAndQueues
             }
             else
             {
+                // This sets the 
                 Rear.Next = node;
                 Rear = node;
             }
