@@ -1,4 +1,4 @@
-# Code Fellows Code Challenges
+# Code Challenges
 
 ## Table of Contents
 
@@ -16,10 +16,10 @@
 - [Challenge: Left Join](Challenges/CSharp/LeftJoin)
 
 
-- [Data Structure: Linked Lists](Data-Structures/LinkedListLibrary)
-- [Data Structure: Stacks and Queues](Data-Structures/StacksAndQueues)
-- [Data Structure: Trees](Data-Structures/Trees)
-- [Data Structure: Hash Tables](Data-Structures/HashTable)
+- [Data Structure: Linked Lists](Data-Structures/CSharp/LinkedListLibrary)
+- [Data Structure: Stacks and Queues](Data-Structures/CSharp/StacksAndQueues)
+- [Data Structure: Trees](Data-Structures/CSharp/Trees)
+- [Data Structure: Hash Tables](Data-Structures/CSharp/HashTable)
 
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
@@ -49,3 +49,4 @@
 - [Challenge: Simple Pig Latin](Challenges/Python/SimplePigLatin)
 - [Challenge: Sum of Digits](Challenges/Python/SumOfDigits)
 - [Challenge: Your Order Please](Challenges/Python/YourOrderPlease)
+
