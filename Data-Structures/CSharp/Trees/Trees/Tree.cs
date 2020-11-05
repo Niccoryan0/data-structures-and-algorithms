@@ -137,5 +137,18 @@ namespace Trees
             }
             return result;
         }
+
+        public int GetEvenSum(Tree<int> tree)
+        {
+            return GetEvenSum(tree.Root, 0);
+        }
+
+        public int GetEvenSum(Node<int> root, int sum)
+        {
+            if (root.Value % 2 == 0) sum += root.Value;
+            if (root.LC != null) sum = GetEvenSum(root.LC, sum);
+            if (root.RC != null) sum = GetEvenSum(root.RC, sum);
+            return sum;
+        }
     }
 }

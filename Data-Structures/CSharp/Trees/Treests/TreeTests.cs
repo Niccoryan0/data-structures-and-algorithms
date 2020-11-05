@@ -192,5 +192,32 @@ namespace Treests
 
             Assert.Equal(-3, result);
         }
+
+        [Fact]
+        public void CanGetEvenSum()
+        {
+            Tree<int> tree = new Tree<int>();
+
+            Node<int> root = new Node<int>(100);
+            Node<int> b = new Node<int>(167);
+            Node<int> d = new Node<int>(44);
+            Node<int> e = new Node<int>(83);
+            Node<int> c = new Node<int>(3);
+            Node<int> f = new Node<int>(108);
+            Node<int> g = new Node<int>(55);
+
+            tree.Root = root;
+
+            root.LC = b;
+            root.RC = c;
+            b.LC = d;
+            b.RC = e;
+            c.LC = f;
+            c.RC = g;
+
+            int result = tree.GetEvenSum(tree);
+
+            Assert.Equal(252, result);
+        }
     }
 }
