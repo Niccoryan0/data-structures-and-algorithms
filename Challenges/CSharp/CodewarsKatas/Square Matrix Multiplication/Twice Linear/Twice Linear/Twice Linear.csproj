@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Square_Matrix_Multiplication</RootNamespace>
+    <RootNamespace>Twice_Linear</RootNamespace>
   </PropertyGroup>
 
 </Project>
