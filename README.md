@@ -3,21 +3,24 @@
 ## Table of Contents
 
 ### C#:
-- [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
-- [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
-- [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
-- [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
-- [Challenge: FIFO Animal Shelter](Challenges/CSharp/FIFOAnimalShelter)
-- [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
-- [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
-- [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
-- [Challenge: Tree Intersection](Challenges/CSharp/TreeIntersection)
-- [Challenge: Left Join](Challenges/CSharp/LeftJoin)
-- [Data Structure: Linked Lists](Data-Structures/CSharp/LinkedListLibrary)
-- [Data Structure: Stacks and Queues](Data-Structures/CSharp/StacksAndQueues)
-- [Data Structure: Trees](Data-Structures/CSharp/Trees)
-- [Data Structure: Hash Tables](Data-Structures/CSharp/HashTable)
-- [Codewars Katas](Challenges/CSharp/CodewarsKatas)
+- Challenges
+ - [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
+ - [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
+ - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
+ - [Challenge: Queue with Stacks](Challenges/CSharp/QueueWithStacks)
+ - [Challenge: FIFO Animal Shelter](Challenges/CSharp/FIFOAnimalShelter)
+ - [Challenge: Multi-Bracket Validation](Challenges/CSharp/MultiBracketValidation)
+ - [Challenge: Insertion Sort](Challenges/CSharp/InsertionSort)
+ - [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
+ - [Challenge: Tree Intersection](Challenges/CSharp/TreeIntersection)
+ - [Challenge: Left Join](Challenges/CSharp/LeftJoin)
+ - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
+- Data Structures
+ - [Data Structure: Linked Lists](Data-Structures/CSharp/LinkedListLibrary)
+ - [Data Structure: Stacks and Queues](Data-Structures/CSharp/StacksAndQueues)
+ - [Data Structure: Trees](Data-Structures/CSharp/Trees)
+ - [Data Structure: Hash Tables](Data-Structures/CSharp/HashTable)
+
 
 ### JavaScript:
 
