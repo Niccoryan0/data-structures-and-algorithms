@@ -3,7 +3,6 @@
 ## Table of Contents
 
 ### C#:
-
 - [Challenge: Insert and shift an array](Challenges/CSharp/ArrayShift)
 - [Challenge: Binary Search](Challenges/CSharp/BinarySearch)
 - [Challenge: Zip Lists](Challenges/CSharp/LL-ziplists)
@@ -14,13 +13,10 @@
 - [Challenge: Repeated Words](Challenges/CSharp/RepeatedWords)
 - [Challenge: Tree Intersection](Challenges/CSharp/TreeIntersection)
 - [Challenge: Left Join](Challenges/CSharp/LeftJoin)
-
-
 - [Data Structure: Linked Lists](Data-Structures/CSharp/LinkedListLibrary)
 - [Data Structure: Stacks and Queues](Data-Structures/CSharp/StacksAndQueues)
 - [Data Structure: Trees](Data-Structures/CSharp/Trees)
 - [Data Structure: Hash Tables](Data-Structures/CSharp/HashTable)
-
 - [Codewars Katas](Challenges/CSharp/CodewarsKatas)
 
 ### JavaScript:
