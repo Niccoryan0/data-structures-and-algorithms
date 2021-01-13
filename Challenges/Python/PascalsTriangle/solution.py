@@ -15,18 +15,20 @@
 # n = 4: [1,  1, 1,  1, 2, 1,  1, 3, 3, 1]
 
 def pascals_triangle(n):
-  result = [[1], [1, 1]]
-  raw = [1, 1, 1]
-  if n < 2: return [1]
-  elif n < 3: return raw[0:n+1]
-  while len(result) < n:
-      current = [1]
-      raw.append(1)
-      previous = result[-1]
-      for i in range(len(previous)-1):
-          current.append(previous[i] + previous[i+1])
-          raw.append(previous[i] + previous[i+1])
-      current.append(1)
-      raw.append(1)
-      result.append(current)
-  return raw
+    result = [[1], [1, 1]]
+    raw = [1, 1, 1]
+    if n < 2:
+        return [1]
+    elif n < 3:
+        return raw[0:n+1]
+    while len(result) < n:
+        current = [1]
+        raw.append(1)
+        previous = result[-1]
+        for i in range(len(previous)-1):
+            current.append(previous[i] + previous[i+1])
+            raw.append(previous[i] + previous[i+1])
+        current.append(1)
+        raw.append(1)
+        result.append(current)
+    return raw

@@ -2,7 +2,7 @@
 
 # Input to the function is guaranteed to be a single string.
 
-import re;
+
 def is_valid_IP(strng):
     numArr = strng.split('.')
     if len(numArr) != 4:
@@ -14,7 +14,8 @@ def is_valid_IP(strng):
             return False
     return True
 
-print(is_valid_IP(1.2.3.4)) # True
-print(is_valid_IP(123.45.67.89)) #True
-print(is_valid_IP(1.2.3)) # False
-print(is_valid_IP(123.045.067.089)) # False
+
+print(is_valid_IP('1.2.3.4'))  # True
+print(is_valid_IP('123.45.67.89'))  # True
+print(is_valid_IP('1.2.3'))  # False
+print(is_valid_IP('123.045.067.089'))  # False

@@ -12,5 +12,6 @@ def pig_it(text):
         result.append(text[i])
     return ' '.join(result)
 
-print(pig_it('Pig latin is cool')) # igPay atinlay siay oolcay
+
+print(pig_it('Pig latin is cool'))  # igPay atinlay siay oolcay
 print(pig_it('Hello world !'))     # elloHay orldway !
