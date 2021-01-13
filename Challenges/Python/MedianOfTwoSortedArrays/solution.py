@@ -1,3 +1,4 @@
+# Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
 def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
     nums = sorted(nums1 + nums2)
