@@ -14,6 +14,10 @@ def namelist(names):
 
     return result
 
-print(namelist([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])) # returns 'Bart, Lisa & Maggie'
-print(namelist([ {name: 'Bart'}, {name: 'Lisa'} ])) # returns 'Bart & Lisa'
-print(namelist([ {name: 'Bart'} ])) # returns 'Bart'
+
+# returns 'Bart, Lisa & Maggie'
+print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]))
+# returns 'Bart & Lisa'
+print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}]))
+# returns 'Bart'
+print(namelist([{'name': 'Bart'}]))
